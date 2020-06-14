@@ -5,12 +5,15 @@
         <div class="row">
             <div class="col-sm-12 col-md-4">
                 <ul class="social-icon">
-                <li><a href="#" target="_blank" class="fa fa-facebook" aria-hidden="true"> </a></li>
-                <li><a href="#" target="_blank" class="fa fa-twitter" aria-hidden="true"> </a></li>
-                <li><a href="#" target="_blank" class="fa fa-youtube" aria-hidden="true"> </a></li>
+                <li><a href="https://www.facebook.com/SCJAMBO/" target="_blank" class="fa fa-facebook" aria-hidden="true"> </a></li>
+                <li><a href="https://twitter.com/SAGRADO09759140" target="_blank" class="fa fa-twitter" aria-hidden="true"> </a></li>
+                <li><a href="https://www.youtube.com/channel/UCmXa75_QU7PXRFVPNy38LHQ" target="_blank" class="fa fa-youtube" aria-hidden="true"> </a></li>
                 <!--<li><a href="" class="fa fa-google-plus" aria-hidden="true"> </a></li>
                 <li><a href="" class="fa fa-linkedin" aria-hidden="true"> </a></li>-->
                     
+
+
+
                 </ul>
             </div>
 

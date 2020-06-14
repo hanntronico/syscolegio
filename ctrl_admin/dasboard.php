@@ -30,52 +30,10 @@ function cortar_palabras($texto, $largor = 6, $puntos = "...")
 } 
 
 
-//cuenta libros
-
-
-//cuenta libros
-$counthr ="SELECT count(idl) as tothr FROM libro  WHERE estado = 'A'";
-$rshr=$linkdocu->query($counthr);
-if($rshr->num_rows>0){
-while($rwhr=$rshr->fetch_array()){
-	  $totahr = $rwhr["tothr"];
-  }
-}else{
-	$totahr = "0";
-}
-
-//cuenta prestamos de libros
-$counthr2 ="SELECT count(idp) as totpres FROM prestamo  WHERE estado = 'A'";
-$rshr2=$linkdocu->query($counthr2);
-if($rshr2->num_rows>0){
-while($rwhr2=$rshr2->fetch_array()){
-	  $totapre = $rwhr2["totpres"];
-  }
-}else{
-	$totapre = "0";
-}
-
-//cuenta prestamos de libros
-$counthr3 ="SELECT count(idr) as totres FROM reserva  WHERE estado = 'A'";
-$rshr3=$linkdocu->query($counthr3);
-if($rshr3->num_rows>0){
-while($rwhr3=$rshr3->fetch_array()){
-	  $totarese = $rwhr3["totres"];
-  }
-}else{
-	$totarese = "0";
-}
-
-//cuenta usuarios 
-$counthr4 ="SELECT count(idu) as totusu FROM usuario  WHERE estado = 'A'";
-$rshr4=$linkdocu->query($counthr4);
-if($rshr4->num_rows>0){
-while($rwhr4=$rshr4->fetch_array()){
-	  $totauuse = $rwhr4["totusu"];
-  }
-}else{
-	$totauuse = "0";
-}
+	$totahr = 0;
+	$totapre = 0;
+  $totarese = 0;
+	$totauuse = 0;
 
 
 ?>
@@ -172,7 +130,7 @@ function confirmar2(){
          <center><img src="images/logo-scj-ini.png"></center><br>
           <div class="row purchace-popup">
             <div class="col-12">
-              <h1 align="center">Sistema de Gestión de Egresados</h1>
+              <h1 align="center">Plataforma Educativa</h1>
             </div>
           </div>
           
@@ -183,71 +141,59 @@ function confirmar2(){
               <div class="card">
                 <div class="card-body">
                 
-                 
+                <center><h2>Mis Cursos</h2></center>
 
                  <div class="panel panel-container">
                   <div class="row">
             <?php 
 
-                      $sqlvista="SELECT * FROM egresados WHERE estado=1 ORDER BY 1 DESC";
+                      
+                      $sqlvista="SELECT e.id_estudiante 
+                                 FROM estudiantes AS e, usuarios AS u 
+                                 WHERE e.user_id = u.id 
+                                 AND u.id = ".$_SESSION["idu"];
                       $rspv=$linkdocu->query($sqlvista);
+                      $rwpv=$rspv->fetch_array();
+                      $codest = $rwpv[0];
+
+
+                      $sqlvista1="SELECT * FROM notas AS n, bloque_cal AS bc, grados AS g 
+                      WHERE n.id_bloque = bc.id
+                      AND bc.id_grado = g.id_grado
+                      AND n.id_estudiante = ".$codest;
+                      $rspv=$linkdocu->query($sqlvista1);
+
+// id, id_estudiante, id_bloque
                       if($rspv->num_rows>0){
                         while($rwpv=$rspv->fetch_array()){
                           $cca = $cca + 1;
-                          $id = $rwpv["idegresado"];
-                          $nom_egre = $rwpv["nom_egresado"];
-                          $apepategre = $rwpv["ape_paterno"];
-                          $apemategre = $rwpv["ape_materno"];
-                          $foto = $rwpv["foto"];
+                          $grado = $rwpv["nombre"];
+                          $nivel = $rwpv["nivel"];
+                          $curso = $rwpv["nom_cal"];
+                          $idcurso = $rwpv["id_bloque"];       
             ?>
 
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
-              <div class="card card-statistics">
-                <div class="card-body">
-                  <div class="clearfix">
-
-<!--                     <div class="float-left">
-                      <i class="mdi mdi-book-plus text-facebook icon-lg"></i>
-                    </div> -->
-                  <?php 
-                    if ($foto=='') {
-                      $imagen = "unkwon.png";
-                    }else{
-                      $imagen = $foto;
-                    }
-                  ?>                    
-                  <center>
-                    <p><img src="../usuaurius/fotos/<?php echo $imagen; ?> " alt="" width="25%"></p>
-                  </center>  
-
-                    <div class="float-right">
-                      <p class="mb-0 text-right"></p>
-                      <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0"></h3>
-                      </div>
-                    </div>
-                    <center>
-                      <?php echo $nom_egre."<br>".$apepategre."<br>".$apemategre; ?>
-                    </center>
+          <div class="card card-statistics">
+            <div class="card-body">
+              <div class="clearfix">
+                <div class="float-left">
+                  <i class="mdi mdi-book-open-page-variant text-success icon-lg"></i>
+                </div>
+                <div class="float-right">
+                  <p class="mb-0 text-right"><?php echo $grado; ?></p>
+                  <div class="fluid-container" style="font-size: 20px;">
+                    <!-- <h3 class="font-weight-small text-right mb-0"><?php //echo $curso; ?></h3> -->
+                    <?php echo $curso; ?>
                   </div>
-                  
-                  <?php 
-                    if ($foto=='') {
-                      $imagen = "unkwon.png";
-                    }else{
-                      $imagen = $foto;
-                    }
-                  ?>
-
-
-
-                  <p class="text-muted mt-3 mb-0">
-                    <a href="egresados.php" class="btn btn-primary btn-block"><i class="mdi mdi-format-list-numbers mr-1" aria-hidden="true"></i> Ver egresado..</a>
-                  </p>
-                  
                 </div>
               </div>
+              <p class="text-muted mt-3 mb-0">
+                <a href="detalle_curso.php?idcurso=<?php echo $idcurso; ?>" class="btn btn-primary btn-block"><i class="mdi mdi-format-list-numbers mr-1" aria-hidden="true"></i> Ver detalle aqui..</a>
+              </p>
             </div>
+          </div>
+        </div>
 
 <?php    
     }
@@ -301,26 +247,27 @@ function confirmar2(){
 
             
 <!-- 				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
-              <div class="card card-statistics">
-                <div class="card-body">
-                  <div class="clearfix">
-                    <div class="float-left">
-                      <i class="mdi mdi-account-multiple text-info icon-lg"></i>
-                    </div>
-                    <div class="float-right">
-                      <p class="mb-0 text-right">USUARIOS</p>
-                      <div class="fluid-container">
-                        <h3 class="font-weight-medium text-right mb-0"><?=$totauuse;?></h3>
-                      </div>
-                    </div>
+          <div class="card card-statistics">
+            <div class="card-body">
+              <div class="clearfix">
+                <div class="float-left">
+                  <i class="mdi mdi-account-multiple text-info icon-lg"></i>
+                </div>
+                <div class="float-right">
+                  <p class="mb-0 text-right">USUARIOS</p>
+                  <div class="fluid-container">
+                    <h3 class="font-weight-medium text-right mb-0"><?=$totauuse;?></h3>
                   </div>
-                 <p class="text-muted mt-3 mb-0">
-                    <a href="user-admin.php" class="btn btn-primary btn-block"><i class="mdi mdi-format-list-numbers mr-1" aria-hidden="true"></i> Ver detalle aqui..</a>
-                  </p>
-                  
                 </div>
               </div>
-            </div> -->
+              <p class="text-muted mt-3 mb-0">
+                <a href="user-admin.php" class="btn btn-primary btn-block"><i class="mdi mdi-format-list-numbers mr-1" aria-hidden="true"></i> Ver detalle aqui..</a>
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+
 			</div>
                  </div>
                   
