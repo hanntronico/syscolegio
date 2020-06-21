@@ -53,7 +53,9 @@
     </div>
 </section>
 
-<section class="case-studies">
+<section class="case-studies" style="font-size: 20px; line-height:30px; background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url(img/logo.jpg);
+                                     background-position: center;
+                                     background-repeat: no-repeat; background-size: 25%;">
     <div class="container">
       <div class="col-lg-12">
         <div class="section-title text-center" id="cont_busqueda">
@@ -61,35 +63,36 @@
           <p align="left">
             Nuestra I.E. adopta los siguientes valores fundamentales como ejes alrededor de las cuales gira nuestra labor educativa: 
             <ul align="left">
-              <li>• Servir desarrolla al individuo y cimienta el sentido de comunidad.</li>
-              <li>• La disciplina como columna vertebral de la formación personal.</li>
-              <li>• La experiencia es la fuente esencial de aprendizaje.</li>
-              <li>• Cada persona tiene el potencial para contribuir.</li>
-              <li>• La integridad del individuo basada en valores y principios es fundamental para el logro de una comunidad mejor.</li>
+              <li style="padding-left: 30px;"><i class="fa fa-check" aria-hidden="true" style="color: #fe1c1e; margin-right: 10px;"></i> Servir desarrolla al individuo y cimienta el sentido de comunidad.</li>
+              <li style="padding-left: 30px;"><i class="fa fa-check" aria-hidden="true" style="color: #fe1c1e; margin-right: 10px;"></i> La disciplina como columna vertebral de la formación personal.</li>
+              <li style="padding-left: 30px;"><i class="fa fa-check" aria-hidden="true" style="color: #fe1c1e; margin-right: 10px;"></i> La experiencia es la fuente esencial de aprendizaje.</li>
+              <li style="padding-left: 30px;"><i class="fa fa-check" aria-hidden="true" style="color: #fe1c1e; margin-right: 10px;"></i> Cada persona tiene el potencial para contribuir.</li>
+              <li style="padding-left: 30px;"><i class="fa fa-check" aria-hidden="true" style="color: #fe1c1e; margin-right: 10px;"></i> La integridad del individuo basada en valores y principios es fundamental para el logro de una comunidad mejor.</li>
             </ul>  
           </p>          
        
           <p align="left">
             Estos valores van acompañados de los siguientes valores personales que se inculcan a través de la convivencia democrática en la I.E.: 
           </p>          
-
-          <h3 align="left"><strong>El Respeto</strong></h3>
+          <br>
+          <h3 align="left" style="border-left: 10px solid #fe1c1e; padding-left: 15px;"><strong>El Respeto</strong></h3>
           <p align="justify">
             El respeto hace referencia al pecho (pectus) donde se encuentra el corazón, símbolo del amor y del afecto. Es decir, nace y se inspira en el amor. Permite y dispone a mirar y considerar a todo persona desde la empatía. En consecuencia, reconocer, aceptar, valorar, comprender y considerar al otro en su dignidad humana son concretizaciones relacionales de ser respetuosos, pues garantiza la transparencia en las relaciones. Reconoce la dignidad humana gestando relaciones interpersonales transparentes desde y por la empatía.             
           </p>
- 
-          <h3 align="left"><strong>La Responsabilidad</strong></h3>
+          <br>
+          <h3 align="left" style="border-left: 10px solid #fe1c1e; padding-left: 15px;"><strong>La Responsabilidad</strong></h3>
           <p align="justify">
             La responsabilidad es una obligación, ya sea moral o incluso legal de cumplir con lo que se ha comprometido. La responsabilidad tiene un efecto directo en otro concepto fundamental: la confianza. Confiamos en aquellas personas que son responsables. Ponemos nuestra fe y lealtad en aquellos que de manera estable cumplen lo que han prometido. <br>
             Una persona responsable persevera, no con terquedad, sino con la motivación de cumplir con el deber que se le asignó y permanece fiel al objetivo. Cuando hay la conciencia de ser un instrumento, o un facilitador, la persona permanece neutral y flexible en su papel. Permanece desapegada, pero con un claro entendimiento de lo que se necesita hacer. Cuando se interpreta un papel con precisión y efectividad uno se siente satisfecho y alegre por haber realizado una contribución significativa. La responsabilidad a menudo requiere de la humildad para ayudar a superar los obstáculos creados por el ego. Por ejemplo, el que actúa con responsabilidad no se apodera ni controla los resultados. El que actúa con responsabilidad también tiene la madurez de saber cuándo debe delegarse una responsabilidad a otro.             
           </p>
-  
-          <h3 align="left"><strong>La Solidaridad</strong></h3>
+          <br>
+          <h3 align="left" style="border-left: 10px solid #fe1c1e; padding-left: 15px;"><strong>La Solidaridad</strong></h3>
           <p align="justify">
             Podemos decir que educar en la solidaridad  desde la infancia supone  dar modelos  solidarios  e intervenir  proponiendo  la tarea desde fines  colectivos y no exclusivamente  individuales. Esta forma de concebir  la solidaridad resulta más  sencilla de desarrollarse  en entornos  plenamente democráticos y respetuosos del individuo y de la colectividad. En la dinámica  de la solidaridad podemos destacar cuatro rasgos  que se relacionan  entre sí en un proceso secuencial. Afirmación del "yo", toma  de conciencia de la realidad del "otro", conociendo su realidad colocándose   en su perspectiva o situación real. 
           </p>
-
-          <h3 align="left"><strong>La Democracia</strong></h3>
+          
+          <br>
+          <h3 align="left" style="border-left: 10px solid #fe1c1e; padding-left: 15px;"><strong>La Democracia</strong></h3>          
           <p align="justify">
             Lo importante es destacar que la democracia es un sistema  de gobierno por el cual una porción  sustancial de los ciudadanos, ya sea en forma directa o indirecta, participa en las decisiones del estado. La democracia   es el fundamento sobre el que está  construido y lo que la hace posible el respeto por la dignidad de la persona que implica la defensa de la libertad y la igualdad. La  concepción  democrática supone entonces  la libertad de poder hacer dentro de un marco  de responsabilidad que permita y garantice, tanto el libre ejercicio  de las facultades  de la persona como el de los procesos políticos y sociales. 
             En el orden  social  democrático, la libertad se manifiesta a través de derechos, implícita y explícitamente  reconocidos: derechos civiles, políticos y sociales.

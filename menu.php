@@ -1,5 +1,5 @@
 <!-- .navbar-top -->
-<nav class="navbar m-menu navbar-default" style="border: none; padding-top:15px;padding-bottom: 30px;">
+<nav class="navbar m-menu navbar-default" style="border: none; padding-top:15px;padding-bottom: 50px;">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -10,16 +10,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="img/Logo_SCJ.png" alt="" width="300px" height="80px"></a>
+            <!-- <a class="navbar-brand" href="#"><img src="img/Logo_SCJ.png" alt="" width="300px" height="80px"></a> -->
+            
+            <a class="navbar-brand" href="#"><img src="img/Logo_SCJ.png" alt="logo SCJ" width="38%" ></a>            
+        
         </div>
 
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="#navbar-collapse-1" style="border: none; padding-top: 20px;">
             <ul class="nav navbar-nav navbar-right main-nav">
-                <li <?=$activeini;?> ><a href="index.php">Inicio</a></li>
+                <li <?=$activeini?> style="border: none; margin-right:0px;">
+                  <a href="index.php" style="color: #fe1c1e; font-size: 16px;">Inicio</a></li>
                 
-                <li class="dropdown dropdown-toggle"><a href="#" data-toggle="dropdown">Nosotros <span><i class="fa fa-angle-down"></i></span></a>
+                <li class="dropdown dropdown-toggle" style="border: none; margin-right:0px;">
+                  <a href="#" data-toggle="dropdown" style="font-size: 16px;">Nosotros <span><i class="fa fa-angle-down"></i></span></a>
                     <ul class="dropdown-menu">
                             <li><a href="historia.php">Historia institucional</a></li>
                             <li><a href="consejdirect.php">Consejo directivo</a></li>
@@ -27,12 +32,12 @@
                             <!-- <li><a href="#">Directores</a></li> -->
                             <li><a href="#">Himno del colegio</a></li>
                             <li><a href="logros.php">Logros académicos</a></li>
-                            <li><a href="#">Zona de Descarga</a></li>
+                            <li><a href="comunicados.php">Comunicados</a></li>
                     </ul>
                 </li>
 
-                <li class="dropdown dropdown-toggle">
-                  <a href="#" data-toggle="dropdown">Proyecto Educativo <span><i class="fa fa-angle-down"></i></span></a>
+                <li class="dropdown dropdown-toggle" style="border: none; margin-right:0px;">
+                  <a href="#" data-toggle="dropdown" style="font-size: 16px;">Proyecto Educativo <span><i class="fa fa-angle-down"></i></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="mision_vision.php">Misión - Visión</a></li>
                     <li><a href="obj_estrat.php">Objetivos estratégicos</a></li>
@@ -45,7 +50,8 @@
 
                 <!-- <li><a href="#">CREAR CUENTA</a></li> -->
                 
-                <li class="dropdown dropdown-toggle"><a href="#" data-toggle="dropdown">Galería <span><i class="fa fa-angle-down"></i></span></a>
+                <li class="dropdown dropdown-toggle" style="border: none; margin-right:0px;">
+                  <a href="#" data-toggle="dropdown" style="font-size: 16px;">Galería <span><i class="fa fa-angle-down"></i></span></a>
                     <ul class="dropdown-menu">
                             <li><a href="galeria.php">Fotos</a></li>
                             <li><a href="videos.php">Videos</a></li>
@@ -75,7 +81,9 @@
                 
                 <!-- </li> -->
                 <!-- <li <?=$activecontac;?> ><a href="contactanos.php">Contactanos</a></li> -->
-                <li><a href="contactanos.php">Contactanos</a></li>
+                <li style="border: none; margin-right:0px;">
+                  <a href="contactanos.php" style="font-size: 16px;">Contactanos</a>
+                </li>
             </ul>
 
         </div>

@@ -122,27 +122,67 @@
         <div class="section-title text-center">
           <div class="row">
 
-            <div class="col-sm-6">
-              <div class="case-studies-content">
+            <!-- <div class="col-sm-1"></div> -->
+
+            <div class="col-sm-5" style="border-bottom: 4px solid #fe1c1e; 
+                                         border-radius: 15px; background: #fff;">
+              <div class="case-studies-content" style="padding: 20px;">
                 <img class="img-responsive" src="img/img-rrepresentante-legal.jpg" alt="case sudies.png" style="margin: 0px auto; text-align: center;">
-                <ul style="margin-top: 10px;">
-                  <li><b>NOMBRE Y APELLIDOS :</b> MIRKO VERA LEÓN</li>
-                  <li><b>CARGO:</b> REPRESENTANTE LEGAL</li>
-                  <li><b>TÍTULO PROFESIONAL :</b> INGENIERO CIVIL</li>
-                </ul>
+                <br>
+<!-- <div class="table-responsive|table-responsive-sm|table-responsive-md|table-responsive-lg|table-responsive-xl">
+  <table class="table table-striped|table-dark|table-bordered|table-borderless|table-hover|table-sm"> -->
+
+
+               <table class="table table-striped" style="text-align: left; ">
+                  <tr>
+                    <td><b>NOMBRE Y APELLIDOS</b></td>
+                    <td>MIRKO VERA LEÓN</td>
+                  </tr>
+                  <tr>
+                    <td><b>CARGO</b></td>
+                    <td>REPRESENTANTE LEGAL</td>
+                  </tr>
+                  <tr>
+                    <td><b>TÍTULO PROFESIONAL</b></td>
+                    <td>INGENIERO CIVIL</td>
+                  </tr>
+                </table>
+                <br><br>
               </div>                      
             </div>
 
-            <div class="col-sm-6">
-              <div class="case-studies-content">
+            <div class="col-sm-2">&nbsp;</div>
+
+            <div class="col-sm-5" style="border-bottom: 4px solid #fe1c1e; 
+                                         border-radius: 15px; background: #fff;">
+              <div class="case-studies-content" style="padding: 20px;">
                 <img class="img-responsive" src="img/img-directora.jpg" alt="case sudies.png" style="margin: 0px auto; text-align: center;">
-                <ul style="margin-top: 10px;">
+                <br>
+
+               <table class="table table-striped" style="text-align: left; ">
+                  <tr>
+                    <td><b>NOMBRE Y APELLIDOS</b></td>
+                    <td>GLADIS CONSUELO LEÓN RODRÍGUEZ</td>
+                  </tr>
+                  <tr>
+                    <td><b>CARGO</b></td>
+                    <td>DIRECTORA DEL PLANTEL</td>
+                  </tr>
+                  <tr>
+                    <td><b>TÍTULO PROFESIONAL</b></td>
+                    <td>PROFESORA DEL ÁREA DE LENGUA Y LITERATURA</td>
+                  </tr>
+                </table>
+
+<!--                 <ul style="margin-top: 10px;">
                   <li><b>NOMBRES Y APELLIDOS :</b> GLADIS CONSUELO LEÓN RODRÍGUEZ</li>
                   <li><b>CARGO :</b> DIRECTORA DEL PLANTEL</li>
                   <li><b>TÍTULO PROFESIONAL  :</b> PROFESORA DEL ÁREA DE LENGUA Y LITERATURA</li>
-                </ul>
+                </ul> -->
               </div>                      
-            </div>            
+            </div>
+
+            <!-- <div class="col-sm-1"></div> -->
 
 <!--             <div class="col-sm-8">
               <div class="case-studies-content" style="text-align: left;">

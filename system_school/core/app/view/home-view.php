@@ -2,22 +2,29 @@
 	$found=true;
 $estudiantes = EstudiantesData::getAll();
 	?>
+
 <section class="content">
 <div class="row">
+
   <div class="col-md-12 ">
     <div class="row">
-      <div class="col-md-3">
-    <img  src="dist/img/logo.jpg" width="150" height="180">
-  </div>
-  <div class="col-md-6 text-center">
-   <h2><b>SISTEMA DE GESTION ACADÉMICA</b></h2>
-  </div>
-  <div class="col-md-3">
+
+      <div class="col-md-3 text-center">
+        <img  src="dist/img/logo.jpg" width="150" height="180">
+      </div>
   
+      <div class="col-md-6 text-center">
+        <h2 style="font-size: 40px;"><b>SISTEMA DE GESTION ACADÉMICA</b></h2>
+      </div>
+  
+      <div class="col-md-3 text-center">
+        <img  src="dist/img/scj.jpg" width="150" height="180">
+      </div>
+    </div>
   </div>
-  </div>
-  </div>
+  
   <br>
+
 	<div class="col-md-12 text-center">
 
 </div>
@@ -43,7 +50,7 @@ $estudiantes = EstudiantesData::getAll();
             <div class="inner">
               <h3><?php echo count(ProfesoresData::getall());?></h3>
 
-              <p>Profesores</p>
+              <p>Docentes</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -58,7 +65,7 @@ $estudiantes = EstudiantesData::getAll();
             <div class="inner">
               <h3><?php echo count(CursosData::getall());?></h3>
 
-              <p>Cursos</p>
+              <p>Áreas</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>

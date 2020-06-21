@@ -2,23 +2,25 @@
     <div class="container">
       <div class="col-lg-12">
         <div class="section-title text-center" id="cont_busqueda">
-            <h1>BIENVENIDA</h1>
-            <p>La educación en su aplicación como proceso está sujeto a constantes cambios, para las instituciones educativas de hoy representa un desafío constante adaptarse, por lo tanto deberán realizar cambios estratégicos al interior de su organización con la finalidad de concebir una institución dinámica e innovadora, con gran capacidad de gestión, desde lo administrativo y pedagógico, la creación de ambientes de aprendizaje  y convivencia, que permita a los estudiantes el crecimiento y la consolidación en los aspectos fundamentales pilares de esta institución que vienen a ser los factores HUMANO, DISCIPLINARIO E INTELECTUAL.</p>
+            <h2>BIENVENIDA</h2>
+            <p style="font-size: 18px; line-height:30px;">La educación en su aplicación como proceso está sujeto a constantes cambios, para las instituciones educativas de hoy representa un desafío constante adaptarse, por lo tanto deberán realizar cambios estratégicos al interior de su organización con la finalidad de concebir una institución dinámica e innovadora, con gran capacidad de gestión, desde lo administrativo y pedagógico, la creación de ambientes de aprendizaje  y convivencia, que permita a los estudiantes el crecimiento y la consolidación en los aspectos fundamentales pilares de esta institución que vienen a ser los factores HUMANO, DISCIPLINARIO E INTELECTUAL.</p>
         </div>
 
         <div class="row">
           <div class="col-lg-6">
-            <p align="justify">Así mismo, en la actualidad enfrentamos cambios aún mayores y con mayor frecuencia producto de la globalización que en la múltiple dimensión de su concepto y efectos asociados a este término, nos exige evolucionar en la forma tradicional de enfocar el aprendizaje, para poder formar alumnos capaces de afrontar los nuevos retos que el mundo actual les presenta, con competencias para procesar y analizar, la información a la que tiene acceso, con mente abierta y positiva y, lo más importante, que se conviertan en un grupo de ciudadanos con principios y valores establecidos desde lo más elemental del conocimiento y utilizar lo aprendido para entender y resolver diversas situaciones en distintos ámbitos de su vida, buscando el mejoramiento continuo de las condiciones y calidad de vida, así como el desarrollo de nuestra provincia, región y país.</p>
+            <p align="justify" style="font-size: 18px; line-height:30px;">Así mismo, en la actualidad enfrentamos cambios aún mayores y con mayor frecuencia producto de la globalización que en la múltiple dimensión de su concepto y efectos asociados a este término, nos exige evolucionar en la forma tradicional de enfocar el aprendizaje, para poder formar alumnos capaces de afrontar los nuevos retos que el mundo actual les presenta, con competencias para procesar y analizar, la información a la que tiene acceso, con mente abierta y positiva y, lo más importante, que se conviertan en un grupo de ciudadanos con principios y valores establecidos desde lo más elemental del conocimiento y utilizar lo aprendido para entender y resolver diversas situaciones en distintos ámbitos de su vida, buscando el mejoramiento continuo de las condiciones y calidad de vida, así como el desarrollo de nuestra provincia, región y país.</p>
           </div>
 
           <div class="col-lg-6" style="text-align: center;">
-            <img src="img/educacion_2020.jpg" alt="educacion.jpg" width="400px">
+            <img src="img/educacion_2020.jpg" alt="educacion.jpg" width="100%">
           </div>
         </div>
-
+        
+        <br>
+        
         <div class="row">
           <div class="col-lg-12">
-             <p align="justify">En el contexto del desarrollo de nuestro plan estratégico institucional, los integrantes de la Comunidad Educativa de la institución educativa privada “Sagrado Corazón de Jesús” AMBO, expresamos nuestro compromiso e identificación con el desarrollo Institucional a través de la excelencia en el servicio profesional y pedagógico. El vigente contexto social regional, nacional y mundial nos exige elevar la calidad y adaptar los servicios educativos que presta nuestra institución.</p>
+             <p align="justify" style="font-size: 18px; line-height:30px;">En el contexto del desarrollo de nuestro plan estratégico institucional, los integrantes de la Comunidad Educativa de la institución educativa privada “Sagrado Corazón de Jesús” AMBO, expresamos nuestro compromiso e identificación con el desarrollo Institucional a través de la excelencia en el servicio profesional y pedagógico. El vigente contexto social regional, nacional y mundial nos exige elevar la calidad y adaptar los servicios educativos que presta nuestra institución.</p>
           </div>
         </div>
 

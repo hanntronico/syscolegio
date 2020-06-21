@@ -38,7 +38,8 @@ class GradData {
 	}
 
 	public static function getAll(){
-		$sql = "select * from ".self::$tablename;
+		// $sql = "select * from ".self::$tablename;
+		$sql = "select * from ".self::$tablename." order by 3 ASC";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new GradData());
 	}

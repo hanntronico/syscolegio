@@ -59,7 +59,7 @@ if (mysql_num_rows($rsde) > 0){
 				 $fechahoy = date("Y-m-d H:i:s");
 				
 				if($acceder==0 || $acceder==3){
-					print "<script>window.location='dasboard.php';</script>";
+					print "<script>window.location='dashboard.php';</script>";
 				}else{
 					print "<script>window.location='../ctrl_admin';</script>";
 				}

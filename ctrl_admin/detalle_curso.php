@@ -129,27 +129,27 @@ function confirmar2(){
           <?php } ?>
 
 
-<?php  
+          <?php  
 
-$sqlvista="SELECT e.id_estudiante 
-           FROM estudiantes AS e, usuarios AS u 
-           WHERE e.user_id = u.id 
-           AND u.id = ".$_SESSION["idu"];
-           $rspv=$linkdocu->query($sqlvista);
-           $rwpv=$rspv->fetch_array();
-$codest = $rwpv[0];
+              $sqlvista="SELECT e.id_estudiante 
+                         FROM estudiantes AS e, usuarios AS u 
+                         WHERE e.user_id = u.id 
+                         AND u.id = ".$_SESSION["idu"];
+                         $rspv=$linkdocu->query($sqlvista);
+                         $rwpv=$rspv->fetch_array();
+              $codest = $rwpv[0];
 
-$sqlvista2="SELECT * 
-            FROM notas AS n, bloque_cal AS bc, grados AS g, profesores as p
-            WHERE n.id_bloque = bc.id 
-            AND bc.id_grado = g.id_grado 
-            AND g.id_prof = p.id_prof
-            AND n.id_estudiante = ".$codest." AND n.id_bloque = ".$idcur;
+              $sqlvista2="SELECT * 
+                          FROM notas AS n, bloque_cal AS bc, grados AS g, profesores as p
+                          WHERE n.id_bloque = bc.id 
+                          AND bc.id_grado = g.id_grado 
+                          AND g.id_prof = p.id_prof
+                          AND n.id_estudiante = ".$codest." AND n.id_bloque = ".$idcur;
 
-$rspv=$linkdocu->query($sqlvista2);
-$rwpv=$rspv->fetch_array();
+              $rspv=$linkdocu->query($sqlvista2);
+              $rwpv=$rspv->fetch_array();
 
-?>
+          ?>
 
           <div class="row">
             <div class="col-lg-12 grid-margin">
@@ -195,220 +195,7 @@ $rwpv=$rspv->fetch_array();
 
 
 
-          <div class="row">
-            <div class="col-lg-12 grid-margin">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <?php //echo $datuser." - ".$datnomuser." - ". $_SESSION["idu"]; ?>
-<!--                    <button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModalregdoce"> 
-                  Crear Nuevo Registro</button> -->
-                  </h4>
 
-                  <h4 class="card-title">Cursos</h4>
-                  <div class="table-responsive">
-                   
-                    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
-                      <thead>
-                        <tr>
-                          <th class="th-sm"># <i class="fa fa-sort float-right" aria-hidden="true"></i></th>
-                          <th class="th-sm">Grado<i class="fa fa-sort float-right" aria-hidden="true"></i></th>
-                          <th class="th-sm">Nivel<i class="fa fa-sort float-right" aria-hidden="true"></i></th>
-                          <th class="th-sm">Curso<i class="fa fa-sort float-right" aria-hidden="true"></i></th>
-                          <th class="th-sm">Enlace<i class="fa fa-sort float-right" aria-hidden="true"></i></th>
-                          <th class="th-sm">Opciones <i class="fa fa-sort float-right" aria-hidden="true"></i></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                     <?php
-// idegresado, nom_egresado, ape_paterno, ape_materno, dni, fec_nac, foto, lug_nac, lug_dom_actual, telefono, email, password, link_conf, redes_sociales, info_contacto, estado                       
-
-        						  // $sqlvista="SELECT * FROM egresados WHERE estado=1 ORDER BY 1 DESC";
-        						  // $rspv=$linkdocu->query($sqlvista);
-
-                      $sqlvista="SELECT e.id_estudiante FROM estudiantes AS e, usuarios AS u WHERE e.user_id = u.id AND u.id = ".$_SESSION["idu"];
-                      $rspv=$linkdocu->query($sqlvista);
-                      $rwpv=$rspv->fetch_array();
-                      $codest = $rwpv[0];
-
-
-                      $sqlvista1="SELECT * FROM notas AS n, bloque_cal AS bc, grados AS g 
-                      WHERE n.id_bloque = bc.id
-                      AND bc.id_grado = g.id_grado
-                      AND n.id_estudiante = ".$codest;
-                      $rspv=$linkdocu->query($sqlvista1);
-
-                      if($rspv->num_rows>0){
-                        while($rwpv=$rspv->fetch_array()){
-                      	  $cca = $cca + 1;
-                          $grado = $rwpv["nombre"];
-                          $nivel = $rwpv["nivel"];
-                          $curso = $rwpv["nom_cal"];
-                          // $nom_egre = $rwpv["nom_egresado"];
-                          // $apepategre = $rwpv["ape_paterno"];
-                          // $apemategre = $rwpv["ape_materno"];
-                      ?>    
-
-            <tr>
-              <td class='font-weight-medium'><?php echo $cca; ?></td>
-              <td><?php echo $grado; ?></td>
-              <td><?php echo $nivel; ?></td>
-              <td><?php echo $curso; ?></td>
-              <td><?php echo "<a href='https://us04web.zoom.us/j/6431886697?pwd=hR5Wg9Bs9Fc' target='_blank'>
-                  Sala virtual
-                  </a>"; ?></td>
-              <td>
-<!--                 <a href='egresados_edit.php?dat=<?php //echo $id;?>' class='btn btn-icons btn-rounded btn-success' title='Editar'><i class='mdi mdi-pencil'></i></a>
-                <a href='delete_egresado.php?dat=<?php //echo $id;?>' onClick='return confirmar2()'>
-                  <button class='btn btn-icons btn-rounded btn-danger' title='Eliminar'><i class='mdi mdi-delete'></i></button>
-                </a> -->
-                <?php if ($rwpv["link_conf"]=='C'): ?>
-                  <a href='egresados_detalles.php?dat=<?php echo $id;?>' class='btn btn-icons btn-rounded btn-warning' title='Agregar más datos'><i class='mdi mdi-note-plus'></i></a>                
-                <?php endif ?>
-              
-              </td>
-            </tr>
-                      <?php 
-                          }
-                        }
-          						?>
-            </tbody>
-          </table>
-                    
-                    <!-- modal nuevo registro docente-->
-  <div class="modal fade" id="myModalregdoce" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Nuevo Registro</h5>
-           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-             <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-         <p style="color: #E10D11;font-size: 12px;"><b>Campos requeridos (*)</b></p>
-          <form class="forms-sample" method="post" action="insert_egresado.php" enctype="multipart/form-data">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="nombres">Nombres <b style="color: #DD070B;font-size: 12px;">(*)</b></label>
-                  <input type="text" name="nombres" class="form-control" placeholder="Ingrese nombres" required >
-                </div>
-
-                <div class="form-group">
-                  <label for="apepaterno">Ape. Paterno <b style="color: #DD070B;font-size: 12px;">(*)</b></label>
-                  <input type="text" name="apepaterno" class="form-control" placeholder="Ingrese apellido paterno" required >
-                </div>                      
-
-                <div class="form-group">
-                  <label for="apematerno">Ape. Materno <b style="color: #DD070B;font-size: 12px;">(*)</b></label>
-                  <input type="text" name="apematerno" class="form-control" placeholder="Ingrese apellido materno" required >
-                </div>  
-
-                <div class="form-group">
-                  <label for="dni">DNI <b style="color: #DD070B;font-size: 12px;">(*)</b></label>
-                  <input type="text" name="dni" class="form-control" placeholder="Ingrese número de dni" required >
-                </div>  
-
-                <div class="form-group">
-                  <label for="fechanac">Fecha Nac. <b style="color: #DD070B;font-size: 12px;">(*)</b></label>
-<!--                   <input type="text" name="fechanac" class="form-control" placeholder="Ingrese fecha de nacimiento" required > -->
-                  <input type="date" name="fechanac" class="form-control" required="" id="fechanac" placeholder="Ingrese fecha de nacimiento">
-                </div>
-
-              </div>
-
-              <div class="col-md-6">
-
-                <div class="form-group">
-                  <label for="foto">Foto <b style="color: #DD070B;font-size: 12px;">(*)</b></label>
-                  <input type="file" name="foto" class="form-control" placeholder="Ingrese foto" required >
-                </div>
-
-                <div class="form-group">
-                  <label for="telefono">Teléfono <b style="color: #DD070B;font-size: 12px;">(*)</b></label>
-                  <input type="text" name="telefono" class="form-control" placeholder="Ingrese teléfono" required >
-                </div>
-
-                <div class="form-group">
-                  <label for="correo">Correo <b style="color: #DD070B;font-size: 12px;">(*)</b></label>
-                  <input type="text" name="correo" class="form-control" placeholder="Ingrese correo" required >
-                </div>
-
-                <div class="form-group">
-                  <label for="redes">Redes <b style="color: #DD070B;font-size: 12px;">(*)</b></label>
-                  <input type="text" name="redes" class="form-control" placeholder="Ingrese redes" required >
-                </div>      
-
-                <div class="form-group">
-                  <label for="info">Info <b style="color: #DD070B;font-size: 12px;">(*)</b></label>
-                  <input type="text" name="info" class="form-control" placeholder="Ingrese info" required >
-                </div>                             
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-4">
-                Lugar de Nacimiento <br>
-
-                <div class="form-group">
-                  <label for="lugnac">Departamento <b style="color: #DD070B;font-size: 12px;">(*)</b></label>
-                  <?php 
-                    $consult = ' ORDER BY 2';
-                  // $codcarrera= 1;
-                    llenarcombo2('departamentos','iddepartamento, departamento', $consult, $coddeparta, '','codDepartamento id=opcDepart required=\'true\'')
-                  ?>
-                </div>
-              </div>
-
-              <div class="col-md-4" id="content_prov">
-                <br>
-                <div class="form-group">
-                <label for="lugnac2">Provincia <b style="color: #DD070B;font-size: 12px;">(*)</b></label>                  
-                  <?php 
-                    llenarcombo('','', $consult, $codprovincia, '','codProvincia id=opcProvincia required=\'true\'')
-                  ?>
-                </div>
-              </div>  
-
-              <div class="col-md-4" id="content_distrito">
-                <br>
-                <div class="form-group">
-                  <label for="lugnac3">Distrito <b style="color: #DD070B;font-size: 12px;">(*)</b></label>                  
-                  <?php 
-                    $consult = ' ORDER BY 2';
-                    // $codcarrera= 1;
-                    // llenarcombo('distritos','iddistrito, distritos', $consult, $coddistrito, '','codDistrito id=opcDistrito')
-                    llenarcombo('','', $consult, $coddistrito, '','codDistrito id=opcDistrito required=\'true\'')
-                  ?>
-                </div>
-              </div>  
-
-
-
-            </div>
-
-
-
-            <center>
-              <button type="submit" class="btn btn-success mr-2">Registrar</button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-            </center>
-          </form>
-        </div>
-
-<!--         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-        </div> -->
-      </div>
-    </div>
-  </div>                    
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
         </div>
         <!-- content-wrapper ends -->

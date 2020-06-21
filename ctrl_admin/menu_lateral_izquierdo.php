@@ -21,7 +21,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="dasboard.php">
+            <a class="nav-link" href="dashboard.php">
              <strong>
               <i class="menu-icon mdi mdi-television"></i>
               <span class="menu-title">Principal</span>

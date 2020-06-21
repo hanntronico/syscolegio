@@ -54,7 +54,7 @@
 </section>
 
 
-<section class="case-studies">
+<section class="case-studies" style="color: #7F0000; font-size: 18px;">
     <div class="container">
       <div class="col-lg-12">
 
@@ -62,20 +62,20 @@
           <div class="row">
 
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>1998</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">1998</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Creación del nivel Inicial  mediante RDR.Nº.00501 del  08 de marzo</li>
-                  <li>• Reconocimiento y felicitación al personal directivo y docente mediante Resolución de Alcaldía a Nº. 57 por la labor desarrollada en bien de la educación ambina.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Creación del nivel Inicial  mediante RDR.Nº.00501 del  08 de marzo</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Reconocimiento y felicitación al personal directivo y docente mediante Resolución de Alcaldía a Nº. 57 por la labor desarrollada en bien de la educación ambina.</li>
                 </ul>
               </div>                      
             </div>
 
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>2000</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">2000</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Ganadores de gallardete en el desfile escolar por fiestas patrias con el nivel primario.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Ganadores de gallardete en el desfile escolar por fiestas patrias con el nivel primario.</li>
                   <br>
                   <li>&nbsp;</li>
                 </ul>
@@ -87,21 +87,21 @@
           <div class="row">
 
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>2002</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">2002</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Creación del nivel secundario mediante RDR. Nº. 00367 del  05 de febrero.</li>
-                  <li>• Reconocimiento  como mejor Empresa Privada mediante Decreto de Alcaldía Nº. 007-2002-A.M.P.A.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Creación del nivel secundario mediante RDR. Nº. 00367 del  05 de febrero.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Reconocimiento  como mejor Empresa Privada mediante Decreto de Alcaldía Nº. 007-2002-A.M.P.A.</li>
                 </ul>
               </div>                      
             </div>            
 
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>2006</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">2006</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Implementación de la sala de cómputo</li>
-                  <li>• Ganadores de gallardete en el desfile de fiestas patrias con el nivel primario</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Implementación de la sala de cómputo</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Ganadores de gallardete en el desfile de fiestas patrias con el nivel primario</li>
                   <li>&nbsp;</li>
                 </ul>
               </div>                      
@@ -112,22 +112,22 @@
 
           <div class="row">
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>2010</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">2010</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Implementación de  sala de cómputo con modernas computadoras instaladas al internet. (aula de innovación).</li>
-                  <li>• Ganadores de gallardete en el desfile por fiestas patrias y aniversario d Ambo con el nivel primario.</li>
-                  <li>• Adquisición e implementación de la banda de guerra del plantel.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Implementación de  sala de cómputo con modernas computadoras instaladas al internet. (aula de innovación).</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Ganadores de gallardete en el desfile por fiestas patrias y aniversario d Ambo con el nivel primario.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Adquisición e implementación de la banda de guerra del plantel.</li>
                 </ul>
               </div>                      
             </div>            
 
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>2012</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">2012</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Ganadores del FENCYT a nivel provincial con el nivel secundario</li>
-                  <li>• Ganadores de gallardete en el desfile por fiestas patria en los tres niveles educativos.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Ganadores del FENCYT a nivel provincial con el nivel secundario</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Ganadores de gallardete en el desfile por fiestas patria en los tres niveles educativos.</li>
                   <li>&nbsp;</li>
                   <br>
                 </ul>
@@ -137,24 +137,24 @@
 
           <div class="row">
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>2013</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">2013</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Ganadores del FENCYT a nivel provincial con l nivel primario</li>
-                  <li>• Ganadores de gallardete por el aniversario de Ambo con el nivel primario</li>
-                  <li>• Destacada participación en los concursos de conocimiento a nivel regional y nacional con el nivel primario   así como en el concurso de la ONEM con el nivel  secundario.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Ganadores del FENCYT a nivel provincial con l nivel primario</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Ganadores de gallardete por el aniversario de Ambo con el nivel primario</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Destacada participación en los concursos de conocimiento a nivel regional y nacional con el nivel primario   así como en el concurso de la ONEM con el nivel  secundario.</li>
                   <br><br>
                 </ul>
               </div>                      
             </div>            
 
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>2014</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">2014</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Adquisición de terreno de 1080 metros cuadrados para la construcción de un complejo educativo.</li>
-                  <li>• Destacada participación en la FENCYT ( 2º puesto) a nivel provincial con el nivel primario.</li>
-                  <li>• Ganadores de gallardete en el desfile de fiestas patrias y aniversario de Ambo con el nivel primario.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Adquisición de terreno de 1080 metros cuadrados para la construcción de un complejo educativo.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Destacada participación en la FENCYT ( 2º puesto) a nivel provincial con el nivel primario.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Ganadores de gallardete en el desfile de fiestas patrias y aniversario de Ambo con el nivel primario.</li>
                   <br>
                 </ul>
               </div>                      
@@ -166,25 +166,25 @@
           <div class="row">
             
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>2015</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">2015</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Adquisición de moderno mobiliario (mesas, sillas) para el nivel primario.</li>
-                  <li>• Construcción de modernas aulas para uso exclusivo del nivel secundario.</li>
-                  <li>• Ganadores de gallardete en el desfile del día de la Bandera con el nivel inicial.</li>
-                  <li>• Ganadores de gallardete en el desfile de fiestas patrias con el nivel secundario.</li>
-                  <li>• Destacada participación en la ONEM, clasificando para la etapa regional con los alumnos del nivel secundario.</li>
-                  <li>• Implementación académica pre universitaria con los alumnos de 4º y 5º año de secundaria.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Adquisición de moderno mobiliario (mesas, sillas) para el nivel primario.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Construcción de modernas aulas para uso exclusivo del nivel secundario.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Ganadores de gallardete en el desfile del día de la Bandera con el nivel inicial.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Ganadores de gallardete en el desfile de fiestas patrias con el nivel secundario.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Destacada participación en la ONEM, clasificando para la etapa regional con los alumnos del nivel secundario.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Implementación académica pre universitaria con los alumnos de 4º y 5º año de secundaria.</li>
                   <br>
                 </ul>
               </div>                      
             </div>
 
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>2016</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">2016</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Implementación del nuevo enfoque Educativo  denominado SUPER CLASE con la utilización de multimedia en las aulas para reforzar el aprendizaje de los estudiantes  y mejorar la calidad educativa adecuándonos a las Rutas de Aprendizaje que el Ministerio de Educación propone.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Implementación del nuevo enfoque Educativo  denominado SUPER CLASE con la utilización de multimedia en las aulas para reforzar el aprendizaje de los estudiantes  y mejorar la calidad educativa adecuándonos a las Rutas de Aprendizaje que el Ministerio de Educación propone.</li>
                   <br><br><br><br><br>
                 </ul>
               </div>                      
@@ -196,21 +196,21 @@
           <div class="row">
             
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>2018</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">2018</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Construcción de aulas modernas en el nuevo pabellón del primer local escolar.</li>
-                  <li>• Resolución de alcaldía felicitando a los estudiantes por su brillante participación en la ONEM en el nivel  secundario.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Construcción de aulas modernas en el nuevo pabellón del primer local escolar.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Resolución de alcaldía felicitando a los estudiantes por su brillante participación en la ONEM en el nivel  secundario.</li>
                   <br>
                 </ul>
               </div>                      
             </div>
 
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>2019</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">2019</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Construcción del complejo deportivo cerrado y Grass Sintético, en el terreno de 1080 metros cuadrados.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Construcción del complejo deportivo cerrado y Grass Sintético, en el terreno de 1080 metros cuadrados.</li>
                   <br><br>
                 </ul>
               </div>                      
@@ -222,10 +222,10 @@
           <div class="row">
             
             <div class="col-sm-6">
-              <div class="case-studies-content">
-                <h1><b>2020</b></h1>
+              <div class="case-studies-content" style="padding: 20px; border-bottom: 6px solid #7f0000; border-radius: 10px; ">
+                <h1><b style="color: #7F0000;">2020</b></h1>
                 <ul style="margin-top: 10px; text-align: left;">
-                  <li>• Implementación de la plataforma virtual.</li>
+                  <li><i class="fa fa-tag" aria-hidden="true"></i> Implementación de la plataforma virtual.</li>
                   <br>
                 </ul>
               </div>                      

@@ -67,7 +67,10 @@
   <div class=" col-lg-10">
     <input type="hidden" name="id_grado" value="<?php echo $_GET["id_grado"];?>">
   <button type="submit" class="btn btn-success">Agregar</button>
-  <button type="button" onclick = "location='./?view=a_academico&opt=all'" class="btn btn-warning">Cancelar</button>
+<!--   <button type="button" onclick = "location='./?view=a_academico&opt=all'" class="btn btn-warning">Cancelar</button> -->
+  <button type="button" onclick = "location='./?view=est_gra&id=<?php echo $_GET["id_grado"]; ?>'" class="btn btn-warning">Cancelar
+
+  </button>
 </div>
 </form>
     </section>

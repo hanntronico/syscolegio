@@ -295,20 +295,23 @@ Shortcode Content
 
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover {
-    color            : #4d6de3;
+    /*color            : #4d6de3;*/
+    color            : #fe1c1e;
     background-color : transparent;
     }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
-    color            : #4d6de3;
+    /*color            : #4d6de3;*/
+    color            : #fe1c1e;
     background-color : transparent;
     }
 
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover {
-    color : #4d6de3;
+    /*color : #4d6de3;*/
+    color : #fe1c1e;
     }
 
 .nav-cta {
@@ -448,14 +451,16 @@ Shortcode Content
     }
 
 .dropdown-menu li a:hover {
-    color            : #4d6de3;
+    /*color            : #4d6de3;*/
+    color            : #fe1c1e;
     background-color : #f5f5f5;
     }
 
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:focus,
 .dropdown-menu > .active > a:hover {
-    color            : #31aae2;
+    /*color            : #31aae2;*/
+    color            : #fe1c1e;
     background-color : #f5f5f5;
     }
 
@@ -1621,3 +1626,5 @@ icon-style
     text-align: center;
     top: 65%;
     }
+
+

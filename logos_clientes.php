@@ -5,13 +5,13 @@
                 <a href="#"><img src="img/logo-minedu.jpg" alt="Image"></a>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-1.jpg" alt="Image"></a>
+                <a href="#"><img src="img/log_artesco.jpg" alt="Image"></a>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-2.jpg" alt="Image"></a>
+                <a href="#"><img src="img/logo_fabercastell.jpg" alt="Image"></a>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                <a href="#"><img src="img/logo-client-3.jpg" alt="Image"></a>
+                <a href="#"><img src="img/logo_vinifan.jpg" alt="Image"></a>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
                 <a href="#"><img src="img/logo-client-4.jpg" alt="Image"></a>
@@ -23,7 +23,7 @@
     </div>
 </section>
 
-<section class="section-content-left-icon" style="font-weight: bolder;">
+<section class="section-content-left-icon" style="font-weight: bolder; font-size: 18px; line-height:25px;">
     <div class="container">
         <div class="row">
 <!--             <div class="col-md-3">
@@ -42,10 +42,10 @@
             <div class="col-md-4">
               <div class="left-icon-wraper">
                 <a href="biblioteca_scj/">
-                  <div class="icon"><i class="flaticon-browser-2"></i></div>
+                  <div class="icon" style="color: #fe1c1e;"><i class="flaticon-browser-2"></i></div>
                   
-                  <div class="content" style="color: #4760BB;">
-                    <h2 style="font-weight: bolder; color: #4760BB;">Biblioteca virtual</h2>
+                  <div class="content" style="color: #fe1c1e;">
+                    <h2 style="font-weight: bolder; color: #fe1c1e;">Biblioteca virtual</h2>
                     <p style="font-weight: bolder;">Catálogo digital de nuestra biblioteca.</p>
                   </div>
                 </a>    
@@ -55,9 +55,9 @@
             <div class="col-md-4">
               <div class="left-icon-wraper">
                 <a href="ctrl_admin/" target="_blank">
-                  <div class="icon"><i class="flaticon-viral-marketing"></i></div>
-                  <div class="content" style="color: #4760BB;">
-                    <h2 style="font-weight: bolder; color: #4760BB;">Plataforma educativa</h2>
+                  <div class="icon" style="color: #808080;"><i class="flaticon-viral-marketing"></i></div>
+                  <div class="content" style="color: #808080;">
+                    <h2 style="font-weight: bolder; color: #808080;">Plataforma educativa</h2>
                     <p style="font-weight: bolder;">Información académica del estudiante.</p>
                   </div>
                 </a>   
@@ -68,9 +68,9 @@
             <div class="col-md-4">
               <div class="left-icon-wraper">
                 <a href="system_school/">
-                  <div class="icon"><i class="flaticon-search-1"></i></div>
-                  <div class="content" style="color: #4760BB;">
-                    <h2 style="font-weight: bolder; color: #4760BB;">Sistema de Gestión Académica</h2>
+                  <div class="icon" style="color: #fe1c1e;"><i class="flaticon-search-1"></i></div>
+                  <div class="content" style="color: #fe1c1e;">
+                    <h2 style="font-weight: bolder; color: #fe1c1e;">Sistema de Gestión Académica</h2>
                     <p style="font-weight: bolder;">Software de control del colegio</p>
                   </div>
                 </a>   

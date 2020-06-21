@@ -6,7 +6,10 @@ $user= UserData::getById($_SESSION["user_id"]);
 ?>
 <div class="row">
 	<div class="col-md-12">
-		<h1>Alumnos <small><?php echo "del ".$grado->nombre." nivel ".$grado->nivel;?></small></h1>
+		
+		<a href="./?view=allgrados" class="btn pull-right btn-sm btn-info"><i class='fa fa-arrow-left'></i> Regresar</a>
+
+		<h1>Estudiantes <small><?php echo "del ".$grado->nombre." nivel ".$grado->nivel;?></small></h1>
 		<?php if($user->kind):?>
 	<a href="./?view=nuevoestu&id_grado=<?php echo $_GET["id"]; ?>" class="btn btn-info"><i class='fa fa-asterisk'></i> Nuevo Alumno</a> <?php endif;?>
 	<?php if(count($estudiantes)>0):?>
@@ -43,14 +46,16 @@ $user= UserData::getById($_SESSION["user_id"]);
 			<th></th>
 			</thead>
 			<?php
-			foreach($estudiantes as $estu){
-				$alumn = $estu->getAlumn();
-				?>
+				foreach($estudiantes as $estu){
+					 $alumn = $estu->getAlumn();
+					 // var_dump($alumn);
+					 // print_r($alumn);
+			?>
 				<tr>
-				<td><?php echo $alumn->nombre." ".$alumn->apellido_paterno." ".$alumn->apellido_materno; ?></td>
+				<td><?php echo $alumn->apellido_paterno." ".$alumn->apellido_materno." ".$alumn->nombre; ?></td>
 				<td style="width:160px;"><a href="./?view=abrirestu&id=<?php echo $alumn->id_estudiante;?>&tid=<?php echo $grado->id_grado;?>" class="btn btn-info btn-xs">Ver</a> <a href="./?view=editarestudiante&id=<?php echo $alumn->id_estudiante;?>&tid=<?php echo $grado->id_grado;?>" class="btn btn-warning btn-xs">Editar</a> <a href="index.php?action=delalumn&id=<?php echo $alumn->id;?>&tid=<?php echo $grado->id;?>" class="btn btn-danger btn-xs">Eliminar</a></td>
 				</tr>
-				<?php
+		<?php
 
 			}
 

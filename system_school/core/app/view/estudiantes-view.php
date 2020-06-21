@@ -24,7 +24,7 @@
             <tbody>  
            <?php foreach($estu as $es):?>
             <tr>
-               <td><?=$es->nombre."<br> ".$es->apellido_paterno." ".$es->apellido_materno;?></td>
+               <td><?=$es->apellido_paterno." ".$es->apellido_materno."<br> ".$es->nombre;?></td>
               <td>fecha Nacimiento: <?=$es->fecha_nac;?><br>Telf/Cel: <?=$es->num_cel;?><br>Direccion: <?=$es->direccion;?></td>
               <td><?=$es->apoderado;?></td>
               <td><?=$es->fecha_reg;?></td>

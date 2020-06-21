@@ -43,7 +43,7 @@
             <tbody>
            <?php foreach($profesor as $prof):?>
             <tr>
-               <td><?=$prof->nombres." ".$prof->apellidos;?></td>
+               <td><?=$prof->apellidos." ".$prof->nombres;?></td>
               <td><?=$prof->especialidad;?></td>
               <td><?=$prof->num_cel;?></td>
               <td><?=$prof->email;?></td>

@@ -1,4 +1,4 @@
-<footer class="footer" style="background-color: #828587 ; ">
+<footer class="footer" style="background-color: #828587;">
     <!-- Footer Widget Section -->
     <div class="footer-widget-section">
         <div class="container">
@@ -9,14 +9,14 @@
                     </div>
                 </div><!-- /.col-sm-4 -->
                 <div class="col-md-8">
-                    <div class="footer-text">
-                      <p>Desde 1996, serviendo a la educación de los niños y jóvenes de la provincia de Ambo impulsando y mejorando la calidad educativa y desarrollo de nuestra región.
+                    <div class="footer-text" style="font-size: 22px;">
+                      <p>Desde 1996, sirviendo a la educación de los niños y jóvenes de la provincia de Ambo e impulsando y mejorando la calidad educativa y desarrollo de nuestra región.
                       </p>
                       <ul>
                           <li class="phone"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 999 312 294
                           <small><i class="fa fa-clock-o" aria-hidden="true"></i> Lunes a viernes 7:30 am - 3:30 pm</small></li>
                           <li class="address">
-                          <address style="font-size: 14px; ">
+                          <address style="font-size: 18px; ">
                             <i class="fa fa-map-pin" aria-hidden="true"></i>
                             Jr. Unión N° 330, Distrito de Ambo - Provincia de Ambo
                           </address>

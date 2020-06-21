@@ -10,9 +10,6 @@
                 <li><a href="https://www.youtube.com/channel/UCmXa75_QU7PXRFVPNy38LHQ" target="_blank" class="fa fa-youtube" aria-hidden="true"> </a></li>
                 <!--<li><a href="" class="fa fa-google-plus" aria-hidden="true"> </a></li>
                 <li><a href="" class="fa fa-linkedin" aria-hidden="true"> </a></li>-->
-                    
-
-
 
                 </ul>
             </div>
@@ -28,7 +25,7 @@
                     <?php }else{ ?>
 <!--                       <li class="get-a-quote"><a href="ingresar/" title="" style="background-color: #FC6D72;">Inicia Sesión</a></li> -->
 <!--                       <li class="get-a-quote"><a href="ingresar/" style="background-color: #D9534F; font-weight: bold;" target="_blank">Inicia Sesión</a></li> -->
-                       <li class="get-a-quote"><a href="ctrl_admin/" style="background-color: #D9534F; font-weight: bold;" target="_blank">Inicia Sesión</a></li>
+                       <li class="get-a-quote"><a href="ctrl_admin/" style="background-color: #D9534F; font-weight: bold;" target="_blank"><i class="fa fa-laptop" aria-hidden="true"></i> Aula Virtual</a></li>
                     <?php } ?>
                 
                 </ul>

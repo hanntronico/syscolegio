@@ -53,20 +53,24 @@
     </div>
 </section>
 
-<section class="case-studies">
+
+<section class="case-studies" style="background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url(img/logo.jpg);
+                                     background-position: center;
+                                     background-repeat: no-repeat; background-size: 15%;">
     <div class="container">
+
       <div class="col-lg-12">
         <div class="section-title text-center" id="cont_busqueda">
           
-          <h2 align="left"><strong>Misión</strong></h2>
+          <h2 align="left" style="border-left: 10px solid #fe1c1e; padding-left: 15px;"><strong>Misión</strong></h2>
 
-          <p align="justify">
+          <p align="justify" style="font-size: 20px; line-height:30px;">
             Somos una institución educativa que cuenta con una propuesta de alta calidad pedagógica y formación integral para nuestros alumnos, enmarcada en los pilares fundamentales de la disciplina, los valores, principios y el conocimiento, con la finalidad de formar ciudadanos que puedan desarrollarse, hacer frente a cualquier situación de la vida y puedan alcanzar el éxito, contribuyendo así al desarrollo de su región y el país.
           </p>
+          <br>
+          <h2 align="left" style="border-left: 10px solid #fe1c1e; padding-left: 15px;"><strong>Visión</strong></h2>
           
-          <h2 align="left"><strong>Visión</strong></h2>
-          
-          <p align="justify">
+          <p align="justify" style="font-size: 20px; line-height:30px;">
             Al 2023   la Institución Educativa Privada “SAGRADO CORAZÓN DE JESÚS” se consolida como:
             <br> 
             Una institución educativa líder e innovadora en la región de Huánuco, con la capacidad de adaptarse a los constantes cambios y desafíos; logrando de esta manera alcanzar los más altos estándares de calidad para que sean aplicados en el proceso formativo y de enseñanza a nuestros alumnos permitiendo explotar su potencial y capacidades y que conlleve a la realización personal de cada uno de ellos.
