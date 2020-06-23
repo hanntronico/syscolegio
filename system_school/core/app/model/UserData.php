@@ -8,6 +8,7 @@ class UserData {
 		$this->lastname = "";
 		$this->username = "";
 		$this->email = "";
+		$this->image = "";
 		$this->password = "";
 		$this->kind = "";
 		$this->created_at = "NOW()";
@@ -28,9 +29,17 @@ class UserData {
 		$sql = "delete from ".self::$tablename." where $k=\"$v\"";
 		Executor::doit($sql);
 	}
-
+	// $user->name = $_POST["name"];
+	// $user->lastname = $_POST["lastname"];
+	// $user->username = $_POST["username"];
+	// $user->email = $_POST["email"];
 	public function update(){
 		$sql = "update ".self::$tablename." set name=\"$this->name\",lastname=\"$this->lastname\",username=\"$this->username\",lastname=\"$this->lastname\",status=\"$this->status\",kind=\"$this->kind\" where id_prof=$this->id";
+		Executor::doit($sql);
+	}
+
+	public function update2(){
+		$sql = "update ".self::$tablename." set name=\"$this->name\",lastname=\"$this->lastname\",username=\"$this->username\",lastname=\"$this->lastname\",image=\"$this->image\",status=\"$this->status\",kind=\"$this->kind\" where id=$this->id";
 		Executor::doit($sql);
 	}
 
@@ -45,7 +54,13 @@ class UserData {
 	}
 
 	public static function getById($id){
-		 $sql = "select * from ".self::$tablename." where id_prof=$id";
+		$sql = "select * from ".self::$tablename." where id_prof=$id";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new UserData());
+	}
+
+	public static function getById2($id){
+		$sql = "select * from ".self::$tablename." where id=$id";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new UserData());
 	}
@@ -68,13 +83,20 @@ class UserData {
 		return Model::many($query[0],new UserData());
 	}
 
-
 	public static function getLike($q){
 		$sql = "select * from ".self::$tablename." where name like '%$q%'";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new UserData());
 	}
 
+	public static function ultidinsert(){
+		$sql = "select last_insert_id() as lui";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new UserData());
+		// $sql = "select * from ".self::$tablename." where name like '%$q%'";
+		// $query = Executor::doit($sql);
+		// return Model::many($query[0],new UserData());
+	}
 
 }
 

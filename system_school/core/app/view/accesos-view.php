@@ -1,13 +1,14 @@
       <?php if(isset($_GET["opt"])&& $_GET["opt"]=="all"):
-      $nominas=NominaData::getAll();
+      // $nominas=NominaData::getAll();
+        $estudiantes=EstudiantesData::getAll(); 
       ?>
          <section class="content-header">
       <h1>
-        Nominas
-        <small>Todas las nominas</small>
+        Accesos
+        <small>Todos los estudiantes</small>
       </h1>
        <!-- <a href="./?view=estudiantes&opt=all" class="btn btn-primary">Nuevo</a> -->
-       <a href="./?view=nomina&opt=new&id=40" class="btn btn-primary">Nuevo</a>
+       <!-- <a href="./?view=nomina&opt=new&id=40" class="btn btn-primary">Nuevo</a> -->
     </section>
 
     <!-- Main content -->
@@ -20,38 +21,65 @@
             <!-- /.box-header -->
             <div class="box-body">
 
-
-          <?php if(count($nominas)>0):?>
+<!-- 
+id_estudiante
+dni
+apellido_paterno
+apellido_materno
+nombre
+genero
+fecha_nac
+apoderado
+num_cel
+direccion
+estado
+fecha_reg
+user_id -->
+          <?php if(count($estudiantes)>0):?>
           <table class="table table-bordered table-hover" id="table" >
             <thead >
               <tr>
-              <th scope="col">Nomina</th>
+              <th scope="col">ID</th>
               <th scope="col">Estudiante</th>
-              <th scope="col">Grado</th>
-              <th scope="col">Año Academico</th>
+              <th scope="col">Apellidos</th>
+              <th scope="col">Nombres</th>
               <th scope="col">Fecha</th>
+              <th scope="col">Acciones</th>
             </tr>
             </thead>
             <tbody>
-           <?php foreach($nominas as $nomi):?>
+           <?php foreach($estudiantes as $est):?>
             <tr>
-               <td><?=$nomi->id_nomina;?></td>
+              <td><?=$est->id_estudiante;?></td>
+
               <td><?php
-                $es=EstudiantesData::getById($nomi->id_estudiante);
-                echo $es->nombre;
-                ?></td>
-                 <td><?php
-                $gra=GradosData::getById($nomi->id_grado);
-                echo $gra->nombre." Nivel: ".$gra->nivel;
-                ?></td>
-                 <td><?php
-                $a_ac=A_academicoData::getById($nomi->id_a);
-                echo $a_ac->anio;
-                ?></td>
-              <td><?=$nomi->fecha;?></td>
+                // $es=EstudiantesData::getById($nomi->id_estudiante);
+                // echo $es->nombre;
+                  echo $est->dni;
+                ?>
+              </td>
+
+              <td><?php
+                // $gra=GradosData::getById($nomi->id_grado);
+                // echo $gra->nombre." Nivel: ".$gra->nivel;
+                  echo $est->apellido_paterno." ".$est->apellido_materno;
+                ?>
+              </td>
+
+              <td><?php
+                // $a_ac=A_academicoData::getById($nomi->id_a);
+                // echo $a_ac->anio;
+                  echo $est->nombre;
+                ?>
+              </td>
+
+              <!-- <td><?=$nomi->fecha;?></td> -->
+              <td><?php echo $est->user_id; ?></td>
+
               <td>
-        <a href="./?view=nomina&opt=edit&id=<?=$nomi->id_nomina;?>" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i> Editar</a>
-        <a href="./?action=nomina&opt=del&id=<?=$nomi->id_nomina;?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o fa-lg"></i> Eliminar</a>
+                  <a href="./?action=accesos&opt=acc&id=<?=$est->id_estudiante;?>" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i> Crear acceso</a>
+<!--                 <a href="./?view=nomina&opt=edit&id=<?=$nomi->id_nomina;?>" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i> Editar</a>
+                <a href="./?action=nomina&opt=del&id=<?=$nomi->id_nomina;?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o fa-lg"></i> Eliminar</a> -->
 
               </td>
             </tr>

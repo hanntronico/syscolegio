@@ -15,7 +15,7 @@ $bloques = Bloque_calData::getAllByTeamId($_GET["id_grado"]);
     <select class="form-control" name="id_bloque" required>
     <option value="">-- SELECCIONE --</option>
     	<?php foreach($bloques as $bloq):?>
-    		<option value="<?php echo $bloq->id; ?>"><?php echo $bloq->nom_cal; ?></option>
+    		<option value="<?php echo $bloq->id; ?>"><?php echo utf8_decode($bloq->nom_cal); ?></option>
     	<?php endforeach; ?>
     </select>
     </div>

@@ -98,6 +98,7 @@ $grado=GradosData::getById($_GET["id"]);
   </div>
   <input type="hidden" name="id" value="<?=$grado->id_grado;?>">
   <button type="submit" class="btn btn-success">Actualizar</button>
+  <button type="button" onclick = "location='./?view=grados&opt=all'" class="btn btn-warning">Cancelar</button>
 </form>
     </section>
   <?php endif;?>

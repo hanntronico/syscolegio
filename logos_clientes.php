@@ -42,6 +42,7 @@
             <div class="col-md-4">
               <div class="left-icon-wraper">
                 <a href="biblioteca_scj/">
+                <!-- <a href="#"> -->
                   <div class="icon" style="color: #fe1c1e;"><i class="flaticon-browser-2"></i></div>
                   
                   <div class="content" style="color: #fe1c1e;">
@@ -55,6 +56,7 @@
             <div class="col-md-4">
               <div class="left-icon-wraper">
                 <a href="ctrl_admin/" target="_blank">
+                <!-- <a href="#" target="_blank"> -->
                   <div class="icon" style="color: #808080;"><i class="flaticon-viral-marketing"></i></div>
                   <div class="content" style="color: #808080;">
                     <h2 style="font-weight: bolder; color: #808080;">Plataforma educativa</h2>
@@ -68,6 +70,7 @@
             <div class="col-md-4">
               <div class="left-icon-wraper">
                 <a href="system_school/">
+                <!-- <a href="#"> -->
                   <div class="icon" style="color: #fe1c1e;"><i class="flaticon-search-1"></i></div>
                   <div class="content" style="color: #fe1c1e;">
                     <h2 style="font-weight: bolder; color: #fe1c1e;">Sistema de Gestión Académica</h2>

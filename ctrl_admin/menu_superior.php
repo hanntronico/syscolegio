@@ -185,7 +185,7 @@ if($nivelaxe==0 || $nivelaxe==3){ }else{
     
    
   <div class="modal fade" id="myModalClave" role="dialog">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-md">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -207,13 +207,17 @@ if($nivelaxe==0 || $nivelaxe==3){ }else{
                           <label for="exampleInputPassword1">Clave Nueva</label>
                           <input type="password" name="llaveuno" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                         </div>
-                        <button type="submit" class="btn btn-success mr-2">Cambiar Clave</button>
-                    
-                      </form>
+                        <div class="form-group text-center">
+                          <button type="submit" class="btn btn-success mr-2">Cambiar Clave</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>          
+                        </div>
+        
+            </form>
+        
         </div>
-        <div class="modal-footer">
+<!--         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

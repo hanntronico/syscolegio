@@ -54,6 +54,13 @@ function confirmar2(){
       <div class="main-panel">
         <div class="content-wrapper">
           
+          <div class="row">
+            <div class="col-md-12 text-right">
+              <a href="cursos.php" class="btn btn-dark" style="color: #fff;" >Regresar</a>  
+            </div>
+          </div>
+
+
           <?php if($mensa=="delete"){ ?>
          <div class="row purchace-popup">
             <div class="col-12">
@@ -151,6 +158,40 @@ function confirmar2(){
 
           ?>
 
+<!-- <div class="table-responsive|table-responsive-sm|table-responsive-md|table-responsive-lg|table-responsive-xl">
+  <table class="table table-striped|table-dark|table-bordered|table-borderless|table-hover|table-sm">
+    <caption>List of users</caption>
+    <thead class="thead-dark|thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
           <div class="row">
             <div class="col-lg-12 grid-margin">
               <div class="card">
@@ -159,37 +200,56 @@ function confirmar2(){
                     <?php echo "Datos del Curso"; ?>
                   </h4>
 
-                  <table>
+                  <table class="table table-hover" cellspacing="0" cellpadding="0" style="width: 50%">
                     <thead>
-                      <tr>
-                        <th>Curso</th>
-                        <th>&nbsp; : &nbsp;</th>
+                      <tr width="50">
+                        <th><span style="font-weight: bolder;">Curso</span></th>
+                        <th><span style="font-weight: bolder;"> : </span></th>
                         <th><?php echo $rwpv["nom_cal"]; ?></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Profesor :</td>
-                        <td>&nbsp; : &nbsp;</td>
+                        <th>Profesor </th>
+                        <th> : </th>
                         <td><?php echo $rwpv["nombres"]." ".$rwpv["apellidos"]; ?></td>
                       </tr>
                       <tr>
-                        <td>Email - profesor :</td>
-                        <td>&nbsp; : &nbsp;</td>
+                        <th>Email - profesor </th>
+                        <th> : </th>
                         <td><?php echo $rwpv["email"]; ?></td>
                       </tr>
                       <tr>
-                        <td>Sala virtual :</td>
-                        <td>&nbsp; : &nbsp;</td>
+                        <th>Sala virtual :</th>
+                        <th> : </th>
                         <td>
                           <a href="<?php echo $rwpv["linksala"]; ?>" class="btn btn-primary" style="color: #fff;" target="_blank">Sala virtual</a>
                         </td>
-                      </tr>                                            
+                      </tr> 
+<!--                       <tr>
+                        <td colspan="3">&nbsp;</td>
+                      </tr> -->
+                      <tr>
+                        <th>Nota del Curso :</th>
+                        <th> : </th>
+                        <td><span style="font-size:18px; font-weight: bolder;">
+                          <?php  
+                            if ($rwpv["nota"]=="N") {
+                              echo "Sin calificar";
+                            }else{
+                              echo $rwpv["nota"];
+                            }
+                          ?>
+                          </span></td>
+                      </tr>                      
+                                                       
                     </tbody>
                   </table>
 
                 </div>
               </div>
+
+
             </div>
           </div>  
 

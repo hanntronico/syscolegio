@@ -58,7 +58,7 @@ if($nivelaxe==0 || $nivelaxe==3){
             <a class="nav-link" href="cursos.php">
              <strong>
               <i class="menu-icon mdi mdi-account-multiple"></i>
-              <span class="menu-title">Cursos</span>
+              <span class="menu-title">Áreas</span>
               </strong>
             </a>
           </li>

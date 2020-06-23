@@ -54,6 +54,12 @@
   <?php endif;?>" style="background-image: url(dist/img/bg11.jpg); repeat left top;" >
   
   <?php if(isset($_SESSION["user_id"])): ?>
+
+    <?php 
+      if (isset($_SESSION["user_id"])) {
+        $codusuario = $_SESSION["user_id"];
+      }
+    ?>
 <!-- Site wrapper -->
 <div class="wrapper">
 
@@ -84,7 +90,10 @@
     <span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
   </a>
   <ul class="dropdown-menu">
-    <li><a href="#"><i class="fa fa-circle-o"></i> Perfil</a></li>
+
+<!-- <a href="./?view=users&opt=edit&id=<?php //echo $user->id;?>" class="btn btn-warning btn-xs">Editar</a>     -->
+
+    <li><a href="./?view=users2&opt=edit&id=<?php echo $codusuario;?>"><i class="fa fa-circle-o"></i> Perfil</a></li>
     <li><a href="./?action=access&opt=logout"><i class="fa fa-sign-out"></i> Salir</a></li>
   </ul>
 </li>
@@ -140,6 +149,7 @@ $user= UserData::getById($_SESSION["user_id"]);
     <li><a href="./?view=niveles&opt=all"><i class="fa fa-bars"></i> Niveles</a></li>
             <li><a href="./?view=grados&opt=all"><i class="fa fa-list-ol"></i> Grados</a></li>
             <li><a href="./?view=nomina&opt=all"><i class="fa fa-folder-o"></i> Nomina</a></li>
+            <li><a href="./?view=accesos&opt=all"><i class="fa fa-folder-o"></i> Accesos estudiante </a></li>
           </ul>
         </li>
 
@@ -191,9 +201,9 @@ $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"
       <div class="box">
 
 
-         <?php
-View::load("index");
-?>
+        <?php
+          View::load("index");
+        ?>
 
         <!-- /.box-body -->
 

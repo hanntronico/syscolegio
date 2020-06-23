@@ -39,5 +39,6 @@
 
   </div>
  <button type="submit" class="btn btn-primary">Guardar</button>
+ <button type="button" onclick = "location='./?view=grados&opt=all'" class="btn btn-warning">Cancelar</button>
 </form>
     </section>

@@ -68,17 +68,22 @@
       <input type="tex" name="nombre" class="form-control" id="inputEmail4" placeholder="Nombre el curso">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputState">Genero:</label>
+      <label for="inputState">Docentes:</label>
       <select id="inputState" name="profesor" class="form-control">
         <option selected>Seleccione....</option>
         <?php foreach($prof as $pro):?>
-      <option value="<?php echo($pro->nombres); ?>"><?php echo $pro->nombres?></option>
+<!--       <option value="<?php //echo($pro->nombres); ?>"><?php //echo $pro->id_prof." ".$pro->nombres?></option> -->
+            <option value="<?php echo($pro->id_prof); ?>">
+              <?php echo $pro->nombres." ".$pro->apellidos?>
+            </option>
+
       <?php endforeach;?>
       </select>
   </div>
   <div class=" col-lg-10">
   <button type="submit" class="btn btn-success">Agregar</button>
-  <button type="button" onclick = "location='./?view=a_academico&opt=all'" class="btn btn-warning">Cancelar</button>
+<!--   <button type="button" onclick = "location='./?view=a_academico&opt=all'" class="btn btn-warning">Cancelar</button> -->
+<button type="button" onclick = "location='./?view=cursos&opt=all'" class="btn btn-warning">Cancelar</button>
 </div>
   </div>
 </form>
@@ -100,6 +105,7 @@ $curso=CursosData::getById($_GET["id"]);
   </div>
   <input type="hidden" name="id" value="<?=$curso->id_curso;?>">
   <button type="submit" class="btn btn-success">Actualizar</button>
+  <button type="button" onclick = "location='./?view=cursos&opt=all'" class="btn btn-warning">Cancelar</button>
 </form>
     </section>
   <?php endif;?>

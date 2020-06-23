@@ -159,7 +159,7 @@ function confirmar2(){
 
                   ?>
 
-                <center><h2>Mis Cursos : <?php echo $grado." - ".$nivel; ?></h2></center>
+                <center><h2>Mis Áreas : <?php echo $grado." - ".$nivel; ?></h2></center>
 
                  <div class="panel panel-container">
                   <div class="row">
@@ -167,7 +167,7 @@ function confirmar2(){
                       $sqlvista1="SELECT * FROM notas AS n, bloque_cal AS bc, grados AS g 
                       WHERE n.id_bloque = bc.id
                       AND bc.id_grado = g.id_grado
-                      AND n.id_estudiante = ".$codest;
+                      AND n.id_estudiante = ".$codest." order by 1 desc";
                       $rspv=$linkdocu->query($sqlvista1);
 
 // id, id_estudiante, id_bloque
@@ -191,7 +191,7 @@ function confirmar2(){
                   <p class="mb-0 text-right"><?php echo $grado; ?></p>
                   <div class="fluid-container" style="font-size: 20px;">
                     <!-- <h3 class="font-weight-small text-right mb-0"><?php //echo $curso; ?></h3> -->
-                    <?php echo $curso; ?>
+                    <?php echo $curso;  ?>
                   </div>
                 </div>
               </div>
