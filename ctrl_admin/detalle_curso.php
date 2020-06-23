@@ -223,7 +223,16 @@ function confirmar2(){
                         <th>Sala virtual :</th>
                         <th> : </th>
                         <td>
-                          <a href="<?php echo $rwpv["linksala"]; ?>" class="btn btn-primary" style="color: #fff;" target="_blank">Sala virtual</a>
+                          <?php 
+                            if ($rwpv["linksala"]==NULL) {
+                              $lsala="#";
+                              $targete="target='_self'";
+                            }elseif ($rwpv["linksala"]!="") {
+                              $lsala=$rwpv["linksala"];
+                              $targete="target='_blank'";
+                            }
+                          ?>
+                          <a href="<?php echo $lsala; ?>" class="btn btn-primary" style="color: #fff;" <?php echo $targete; ?> >Sala virtual</a>
                         </td>
                       </tr> 
 <!--                       <tr>

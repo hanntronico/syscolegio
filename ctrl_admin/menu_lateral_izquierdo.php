@@ -52,6 +52,25 @@ if($nivelaxe==0 || $nivelaxe==3){
 
 ?>
 
+<?php if ($codnivel == 0): ?>
+  
+
+          <li class="nav-item">
+            <a class="nav-link" href="bloqcur.php">
+             <strong>
+              <i class="menu-icon mdi mdi-account-multiple"></i>
+              <span class="menu-title">Áreas</span>
+              </strong>
+            </a>
+          </li>
+
+
+
+<?php //else: ?>
+  
+<?php endif ?>
+
+
 <?php if ($codnivel == 3): ?>
   
           <li class="nav-item">

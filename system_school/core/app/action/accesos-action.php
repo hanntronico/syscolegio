@@ -64,7 +64,7 @@ if (isset($_GET["opt"])&& $_GET["opt"]=="acc") {
 			// echo "ya existe";
 		}
 
-		Core::alert("Usuario agreado correctamente!");
+		// Core::alert("Usuario agreado correctamente!");
 		Core::redir("./?view=accesos&opt=all");
 
 }

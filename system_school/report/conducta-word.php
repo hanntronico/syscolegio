@@ -58,12 +58,12 @@ $word->addTableStyle('table1', $styleTable,$styleFirstRow);
 $section1->addText("");
 $section1->addText("");
 $section1->addText("");
-$section1->addText("Att: HolySchools");
+$section1->addText("Att: Sagrado Corazón de Jesús");
 $filename = "Conducta-".time().".docx";
 #$word->setReadDataOnly(true);
 $word->save($filename,"Word2007");
 //chmod($filename,0444);
-header("Content-Disposition: attachment; filename='$filename'");
+header("Content-Disposition: attachment; filename=$filename");
 readfile($filename); // or echo file_get_contents($filename);
 unlink($filename);  // remove temp file
 

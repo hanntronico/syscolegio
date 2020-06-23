@@ -1,6 +1,8 @@
       <?php if(isset($_GET["opt"])&& $_GET["opt"]=="all"):
       // $nominas=NominaData::getAll();
         $estudiantes=EstudiantesData::getAll(); 
+        // $estudiantes=EstudiantesData::getAllBy("user_id", 2); 
+
       ?>
          <section class="content-header">
       <h1>

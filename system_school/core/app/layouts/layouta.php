@@ -117,12 +117,13 @@ $user= UserData::getById($_SESSION["user_id"]);
 
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-         <li><a href="./?view=home"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
+         <li><a href="./?view=prof_grad"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
 <?php if(!$user->kind):?>
-         <li><a href="./?view=home"><i class="fa fa-users"></i> <span>Asistencia</span></a></li>
-         <li><a href="./?view=home"><i class="fa fa-book"></i> <span>Calificaciones</span></a></li>
-         <li><a href="./?view=home"><i class="fa  fa-graduation-cap"></i> <span>Conducta</span></a></li>
+         <li><a href="./?view=prof_grad"><i class="fa fa-users"></i> <span>Asistencia</span></a></li>
+         <li><a href="./?view=prof_grad"><i class="fa fa-book"></i> <span>Calificaciones</span></a></li>
+         <li><a href="./?view=prof_grad"><i class="fa  fa-graduation-cap"></i> <span>Conducta</span></a></li>
          <li><a href="./?view=prof_grad"><i class="fa  fa-hourglass-end"></i> <span>Mis Grados</span></a></li>
+          <li><a href="./?view=cursos&idgra=<?php echo $codusuario; ?>"><i class="fa  fa-hourglass-end"></i> <span>Mis Áreas</span></a></li>
 <?php endif;?>
 
 

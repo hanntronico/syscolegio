@@ -3,7 +3,7 @@ class CursosData {
 	public static $tablename = "cursos";
 
 	public function __construct(){
-		$this->nombre = "hola";
+		$this->nombre = "";
 		$this->profesor = "";
 	}
 
@@ -57,6 +57,12 @@ class CursosData {
 		return Model::many($query[0],new CursosData());
 	}
 
+	public static function getAllBy2($k,$v){
+		 $sql = "select * from ".self::$tablename.", bloq_cur, bloque_cal
+WHERE cursos.id_curso = bloq_cur.id_curso and bloq_cur.id_bloque_cal = bloque_cal.id and ".self::$tablename.".$k=\"$v\"";
+		$query = Executor::doit($sql);
+		return Model::many($query[0],new CursosData());
+	}
 
 	public static function getLike($q){
 		$sql = "select * from ".self::$tablename." where name like '%$q%'";

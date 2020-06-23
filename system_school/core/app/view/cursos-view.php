@@ -1,7 +1,7 @@
       <?php if(isset($_GET["opt"])&& $_GET["opt"]=="all"):
       $curso=CursosData::getAll();
       ?>
-         <section class="content-header">
+    <section class="content-header">
       <h1>
         Cursos
         <small>Todo los cursos</small>
@@ -108,4 +108,74 @@ $curso=CursosData::getById($_GET["id"]);
   <button type="button" onclick = "location='./?view=cursos&opt=all'" class="btn btn-warning">Cancelar</button>
 </form>
     </section>
-  <?php endif;?>
+  
+
+  <?php //endif;?>
+
+<?php elseif(isset($_GET["idgra"])):
+    $curso=Cursos2Data::getAllBy2("id_prof",$_GET["idgra"]);
+  // echo $_GET["idgra"];
+    // var_dump($curso);
+?>
+
+<!-- id_curso
+nombre
+profesor
+id_prof
+ -->
+    <section class="content-header">
+      <h1>
+        Cursos
+        <small>Todos los cursos de Prof(a) : <?php echo $curso[0]->profesor; ?></small>
+      </h1>
+       <!-- <a href="./?view=cursos&opt=new" class="btn btn-primary">Nuevo</a> -->
+    </section>
+
+    <!-- Main content -->
+
+<section class="content">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+
+
+          <?php if(count($curso)>0):?>
+          <table class="table table-bordered table-hover" id="table" >
+            <thead >
+              <tr>
+              <!-- <th scope="col">id_curso</th> -->
+              <th scope="col">Nombre</th>
+              <th scope="col">Acción</th>
+              <!-- <th scope="col">Nombre</th> -->
+            </tr>
+            </thead>
+            <tbody>
+           <?php foreach($curso as $cu):?>
+            <tr>
+               <!-- <td><?=$cu->id_curso;?></td> -->
+              <td><?=$cu->nombre;?></td>
+              <!-- <td><?=$cu->linksala;?></td> -->
+              <td>
+        <a href="<?php echo $cu->linksala; ?>" target="_blank" class="btn btn-primary btn-xl"><i class="fa fa-pencil"></i> Sala Virtual</a>
+              </td>
+            </tr>
+          <?php endforeach;?>
+        </tbody>
+          </table>
+        <?php else:?>
+          <div class="box-body">
+          <p class="alert alert-warning">Aun no hay estudiantes registrados!</p>
+        </div>
+        <?php endif;?>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+
+
+
+<?php endif;?>
