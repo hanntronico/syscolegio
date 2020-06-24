@@ -200,7 +200,7 @@ function confirmar2(){
 
             <tr>
               <td class='font-weight-medium'><?php //echo $cca; ?></td>
-              <td><?php echo $idcurso; ?></td>
+              <td><?php //echo $idcurso; ?></td>
               <td><?php //echo $nombre; ?></td>
               <td><?php //echo $profesor; ?></td>
               <td>

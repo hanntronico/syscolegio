@@ -164,17 +164,36 @@ function confirmar2(){
                  <div class="panel panel-container">
                   <div class="row">
             <?php 
-                      $sqlvista1="SELECT * FROM notas AS n, bloque_cal AS bc, grados AS g 
-                      WHERE n.id_bloque = bc.id
-                      AND bc.id_grado = g.id_grado
-                      AND n.id_estudiante = ".$codest." order by 1 desc";
-                      $rspv=$linkdocu->query($sqlvista1);
+
+              // $sqlvista2="SELECT * 
+              //             FROM notas AS n, bloque_cal AS bc, grados AS g, profesores as p
+              //             WHERE n.id_bloque = bc.id 
+              //             AND bc.id_grado = g.id_grado 
+              //             AND g.id_prof = p.id_prof
+              //             AND n.id_estudiante = ".$codest." AND n.id_bloque = ".$idcur;
+
+                      // $sqlvista1="SELECT * FROM notas AS n, bloque_cal AS bc, grados AS g 
+                      // WHERE n.id_bloque = bc.id
+                      // AND bc.id_grado = g.id_grado
+                      // AND n.id_estudiante = ".$codest." order by 1 desc";
+                      // $rspv=$linkdocu->query($sqlvista1);
+
+$sqlvista1="SELECT * FROM notas AS n, 
+                          bloque_cal AS bc, 
+                          bloq_cur as bqc, 
+                          cursos AS c, profesores as p 
+            WHERE n.id_bloque = bc.id 
+            AND bc.id = bqc.id_bloque_cal 
+            AND bqc.id_curso = c.id_curso 
+            AND c.id_prof = p.id_prof 
+            AND n.id_estudiante = ".$codest." ORDER BY 1 DESC";
+$rspv=$linkdocu->query($sqlvista1);
 
 // id, id_estudiante, id_bloque
                       if($rspv->num_rows>0){
                         while($rwpv=$rspv->fetch_array()){
                           $cca = $cca + 1;
-                          $grado = $rwpv["nombre"];
+                          // $grado = $rwpv["nombre"];
                           $nivel = $rwpv["nivel"];
                           $curso = $rwpv["nom_cal"];
                           $idcurso = $rwpv["id_bloque"];       

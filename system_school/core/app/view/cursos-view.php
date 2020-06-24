@@ -27,6 +27,7 @@
               <th scope="col">id_curso</th>
               <th scope="col">Nombre</th>
               <th scope="col">Profesor Encargado</th>
+              <th scope="col">Acciones</th>
             </tr>
             </thead>
             <tbody>
@@ -72,10 +73,10 @@
       <select id="inputState" name="profesor" class="form-control">
         <option selected>Seleccione....</option>
         <?php foreach($prof as $pro):?>
-<!--       <option value="<?php //echo($pro->nombres); ?>"><?php //echo $pro->id_prof." ".$pro->nombres?></option> -->
-            <option value="<?php echo($pro->id_prof); ?>">
-              <?php echo $pro->nombres." ".$pro->apellidos?>
-            </option>
+      <option value="<?php echo($pro->nombres); ?>"><?php echo $pro->nombres?></option>
+<!--             <option value="<?php //echo($pro->id_prof); ?>">
+              <?php //echo $pro->nombres." ".$pro->apellidos?>
+            </option> -->
 
       <?php endforeach;?>
       </select>
@@ -115,7 +116,7 @@ $curso=CursosData::getById($_GET["id"]);
 <?php elseif(isset($_GET["idgra"])):
     $curso=Cursos2Data::getAllBy2("id_prof",$_GET["idgra"]);
   // echo $_GET["idgra"];
-    // var_dump($curso);
+    //var_dump($curso);
 ?>
 
 <!-- id_curso
@@ -148,6 +149,7 @@ id_prof
               <tr>
               <!-- <th scope="col">id_curso</th> -->
               <th scope="col">Nombre</th>
+              <th scope="col">Grado </th>
               <th scope="col">Acción</th>
               <!-- <th scope="col">Nombre</th> -->
             </tr>
@@ -157,7 +159,7 @@ id_prof
             <tr>
                <!-- <td><?=$cu->id_curso;?></td> -->
               <td><?=$cu->nombre;?></td>
-              <!-- <td><?=$cu->linksala;?></td> -->
+              <td><?=$cu->nomgra;?></td>
               <td>
         <a href="<?php echo $cu->linksala; ?>" target="_blank" class="btn btn-primary btn-xl"><i class="fa fa-pencil"></i> Sala Virtual</a>
               </td>

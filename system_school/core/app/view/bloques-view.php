@@ -14,7 +14,7 @@ $bloques = Bloque_calData::getAllByTeamId($_GET["id_grado"]);
 			// si hay usuarios
 			?>
 
-			<table class="table table-bordered table-hover">
+			<table class="table table-bordered table-hover" id="table">
 			<thead>
 			<th>Cursos:</th>
 			<th>acciones</th>

@@ -25,6 +25,7 @@ $bloques=CursosData::getAll();
     <div class="col-lg-offset-2 col-lg-10">
     <input type="hidden" name="id_grado" value="<?php echo $_GET["id_grado"];?>">
       <button type="submit" class="btn btn-primary">Agregar Bloque</button>
+       <button type="button" onclick = "location='./?view=bloques&id_grado=<?php echo $_GET["id_grado"];?>'" class="btn btn-warning">Cancelar</button>
     </div>
   </div>
 </form>

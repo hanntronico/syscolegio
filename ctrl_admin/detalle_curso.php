@@ -146,12 +146,22 @@ function confirmar2(){
                          $rwpv=$rspv->fetch_array();
               $codest = $rwpv[0];
 
-              $sqlvista2="SELECT * 
-                          FROM notas AS n, bloque_cal AS bc, grados AS g, profesores as p
+              // $sqlvista2="SELECT * 
+              //             FROM notas AS n, bloque_cal AS bc, grados AS g, profesores as p
+              //             WHERE n.id_bloque = bc.id 
+              //             AND bc.id_grado = g.id_grado 
+              //             AND g.id_prof = p.id_prof
+              //             AND n.id_estudiante = ".$codest." AND n.id_bloque = ".$idcur;
+
+              $sqlvista2="SELECT * FROM notas AS n, 
+                                        bloque_cal AS bc, 
+                                        bloq_cur as bqc, 
+                                        cursos AS c, profesores as p 
                           WHERE n.id_bloque = bc.id 
-                          AND bc.id_grado = g.id_grado 
-                          AND g.id_prof = p.id_prof
-                          AND n.id_estudiante = ".$codest." AND n.id_bloque = ".$idcur;
+                          AND bc.id = bqc.id_bloque_cal 
+                          AND bqc.id_curso = c.id_curso 
+                          AND c.id_prof = p.id_prof 
+                          AND n.id_estudiante = ".$codest." AND n.id_bloque = ".$idcur." ORDER BY 1 DESC ";                          
 
               $rspv=$linkdocu->query($sqlvista2);
               $rwpv=$rspv->fetch_array();
@@ -197,7 +207,7 @@ function confirmar2(){
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title" style="font-size:20px;">
-                    <?php echo "Datos del Curso"; ?>
+                    <?php echo "Datos del Curso".$codest." - ".$idcur; ?>
                   </h4>
 
                   <table class="table table-hover" cellspacing="0" cellpadding="0" style="width: 50%">
