@@ -3,11 +3,11 @@
 
       ?>
 
-         <section class="content-header">
+    <section class="content-header">
       <h1>
         Profesores
         <small>Lista de profesores</small>
-      </h1>
+      </h1><br>
        <a href="./?view=profesores&opt=new" class="btn btn-success">Nuevo Registro</a>
     </section>
 
@@ -34,9 +34,10 @@
               <tr>
               <th scope="col">Nombres y Apellidos</th>
               <th scope="col">Especialidad</th>
-              <th scope="col">Telefono</th>
+              <!-- <th scope="col">Telefono</th> -->
+              <th scope="col">DNI</th>
               <th scope="col">E_mail</th>
-              <th scope="col">Direccion</th>
+              <!-- <th scope="col">Direccion</th> -->
               <th scope="col">Operaciones</th>
             </tr>
             </thead>
@@ -45,9 +46,10 @@
             <tr>
                <td><?=$prof->apellidos." ".$prof->nombres;?></td>
               <td><?=$prof->especialidad;?></td>
-              <td><?=$prof->num_cel;?></td>
+              <!-- <td><?=$prof->num_cel;?></td> -->
+              <td><?=$prof->dni;?></td>
               <td><?=$prof->email;?></td>
-              <td><?=$prof->direccion;?></td>
+<!--               <td><?=$prof->direccion;?></td> -->
               <td>
                 <div class="btn-group">
   <a class="btn btn-info " href="#"><i class="fa fa-cog fa-spin fa-1x fa-fw"></i> Acciones</a>
@@ -84,32 +86,32 @@
   <div class="form-row">
   <div class="form-group col-md-3">
       <label for="inputEmail4">DNI:</label>
-      <input type="tex" name="dni" class="form-control" id="inputEmail4" placeholder="Numero de DNI">
+      <input type="tex" name="dni" class="form-control" id="inputEmail4" placeholder="Numero de DNI" required>
     </div>
     <div class="form-group col-md-3">
       <label for="inputEmail4">Nombres:</label>
-      <input type="text" name="nombres" class="form-control" id="inputEmail4" placeholder="Nombres y Apellidos">
+      <input type="text" name="nombres" class="form-control" id="inputEmail4" placeholder="Nombres y Apellidos" required>
     </div>
       <div class="form-group col-md-3">
       <label for="inputEmail4">Apellidos:</label>
-      <input type="text" name="apellidos" class="form-control" id="inputEmail4" placeholder="Nombres y Apellidos">
+      <input type="text" name="apellidos" class="form-control" id="inputEmail4" placeholder="Nombres y Apellidos" required>
     </div>
     <div class="form-group col-md-3">
       <label for="inputEmail4">Numero / Cel:</label>
-      <input type="text" name="num_cel" class="form-control" id="inputEmail4" placeholder="999999999">
+      <input type="text" name="num_cel" class="form-control" id="inputEmail4" placeholder="999999999" required>
     </div>
     <div class="form-group col-md-3">
       <label for="inputEmail4">Email</label>
-      <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email" required>
     </div>
   </div>
    <div class="form-group col-md-6">
       <label for="inputEmail4">Especialidad:</label>
-      <input type="text" name="especialidad" class="form-control" id="inputEmail4" placeholder="especialidad">
+      <input type="text" name="especialidad" class="form-control" id="inputEmail4" placeholder="especialidad" required>
     </div>
      <div class="form-group col-md-6">
       <label for="inputEmail4">Direccion:</label>
-      <input type="text" name="direccion" class="form-control" id="inputEmail4" placeholder="especialidad">
+      <input type="text" name="direccion" class="form-control" id="inputEmail4" placeholder="especialidad" required>
     </div>
    <div class=" col-lg-10">
   <button type="submit" class="btn btn-success">Guardar</button>
