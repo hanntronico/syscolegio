@@ -15,7 +15,7 @@ $bloques=CursosData::getAll();
         <option value="">selecione un curso</option>
         <?php foreach ($bloques as $bloq):
          ?>
-        <option value="<?php echo utf8_decode($bloq->nombre) ?>"><?php echo $bloq->nombre ?></option>
+        <option value="<?php echo $bloq->nombre ?>"><?php echo $bloq->nombre ?></option>
       <?php endforeach; ?>
       </select>
     </div>

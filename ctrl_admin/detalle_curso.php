@@ -207,7 +207,7 @@ function confirmar2(){
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title" style="font-size:20px;">
-                    <?php echo "Datos del Curso".$codest." - ".$idcur; ?>
+                    <?php echo "Datos del Curso"//.$codest." - ".$idcur; ?>
                   </h4>
 
                   <table class="table table-hover" cellspacing="0" cellpadding="0" style="width: 50%">
