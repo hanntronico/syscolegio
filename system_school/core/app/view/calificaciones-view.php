@@ -1,11 +1,21 @@
 <?php
-// $bloques = Bloque_calData::getAllByTeamId($_GET["id_grado"]);
+    // $bloques = Bloque_calData::getAllByTeamId($_GET["id_grado"]);
+
 // echo "idProf : ".$_SESSION["user_id"];
 // echo "<br>";
 // echo "id usuario : ".$_SESSION["idusuario"];
+// echo "<br><br><br>";
 
+if (isset($_SESSION["idusuario"]) && $_SESSION["idusuario"]==1) {
+    $bloques = Bloque_calData::getAllByTeamId($_GET["id_grado"]);
+}else{
     $bloques = Cursos2Data::getCursosByProfyGrad($_SESSION["user_id"],$_GET["id_grado"]);
+    
+}
     // print_r($cursosporprof);
+    // print_r($bloques);
+
+
 ?>
 
 <div class="row">
