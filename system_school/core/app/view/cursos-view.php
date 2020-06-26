@@ -113,10 +113,12 @@ $curso=CursosData::getById($_GET["id"]);
 
   <?php //endif;?>
 
+
+
 <?php elseif(isset($_GET["idgra"])):
     $curso=Cursos2Data::getAllBy2("id_prof",$_GET["idgra"]);
   // echo $_GET["idgra"];
-    //var_dump($curso);
+    // var_dump($curso);
 ?>
 
 <!-- id_curso
@@ -148,8 +150,8 @@ id_prof
             <thead >
               <tr>
               <!-- <th scope="col">id_curso</th> -->
-              <th scope="col">Nombre</th>
-              <th scope="col">Grado </th>
+              <th scope="col" width="25%">Nombre</th>
+              <th scope="col" width="55%">Grado </th>
               <th scope="col">Acción</th>
               <!-- <th scope="col">Nombre</th> -->
             </tr>
@@ -160,7 +162,7 @@ id_prof
                <!-- <td><?=$cu->id_curso;?></td> -->
               <td><?=$cu->nombre;?></td>
               <td><?=$cu->nomgra;?></td>
-              <td>
+              <td style="text-align: center;" >
         <a href="<?php echo $cu->linksala; ?>" target="_blank" class="btn btn-primary btn-xl"><i class="fa fa-pencil"></i> Sala Virtual</a>
               </td>
             </tr>

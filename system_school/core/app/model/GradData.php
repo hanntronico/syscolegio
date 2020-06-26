@@ -53,6 +53,8 @@ class GradData {
 	}
 
 	public static function getFavoritesByUserId($id){
+		$sqlsetutf = "set names utf8";
+		$query2 = Executor::doit($sqlsetutf);		
 		$sql = "select * from ".self::$tablename." where id_prof=$id and fav=1";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new GradData());

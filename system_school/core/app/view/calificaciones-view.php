@@ -1,5 +1,11 @@
 <?php
-$bloques = Bloque_calData::getAllByTeamId($_GET["id_grado"]);
+// $bloques = Bloque_calData::getAllByTeamId($_GET["id_grado"]);
+// echo "idProf : ".$_SESSION["user_id"];
+// echo "<br>";
+// echo "id usuario : ".$_SESSION["idusuario"];
+
+    $bloques = Cursos2Data::getCursosByProfyGrad($_SESSION["user_id"],$_GET["id_grado"]);
+    // print_r($cursosporprof);
 ?>
 
 <div class="row">
@@ -7,7 +13,7 @@ $bloques = Bloque_calData::getAllByTeamId($_GET["id_grado"]);
 	<a href="./?view=est_gra&id=<?php echo $_GET["id_grado"]; ?>" class="btn pull-right btn-sm btn-default"><i class='fa fa-arrow-left'></i> Regresar</a>
 		<h1>Calificaciones</h1>
         <?php if(count($bloques)>0):?>
-<!--	<a href="index.php?view=list&id_grado=<?php echo $_GET["id_grado"]; ?>" class="btn btn-default"><i class='fa fa-check'></i> Asistencia</a> -->
+<!--	<a href="index.php?view=list&id_grado=<?php //echo $_GET["id_grado"]; ?>" class="btn btn-default"><i class='fa fa-check'></i> Asistencia</a> -->
 <form class="form-horizontal" id="loadlist" role="form">
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Seleccionar Curso:</label>

@@ -1,3 +1,4 @@
+
 <div class="row">
 	<div class="col-md-12">
 <div class="btn-group pull-right">
@@ -27,11 +28,17 @@
 		<h1>Todos mis Grados</h1>
 <br>
 		<?php
+			$user=null;
+			$user= UserData::getById($_SESSION["user_id"]);
+			$grados = GradData::getFavoritesByUserId($_SESSION["user_id"]);
+			
+			$cursos = Cursos2Data::getAllBy2("id_prof",$user->id_prof);
+			// var_dump($cursos);
 
-		$grados = GradData::getFavoritesByUserId($_SESSION["user_id"]);
-		if(count($grados)>0){
+			// if(count($grados)>0){
+			if(count($cursos)>0){
 			// si hay usuarios
-			?>
+		?>
 
 			<table class="table table-bordered table-hover">
 			<thead>
@@ -40,12 +47,37 @@
 			<th></th>
 			</thead>
 			<?php
-			foreach($grados as $grado){
+		// $this->id_prof = "";
+		// $this->nombre = "";
+		// $this->profesor = "";
+		// $this->linksala = "";
+		// $this->nomgra = "";
+		// $this->codgrado = "";
+
+
+			foreach($cursos as $curso){
 				?>
 				<tr>
-				<td style="width:130px;"><a href="index.php?action=selectteam&id=<?php echo $grado->id_grado;?>" class="btn btn-success btn-xs">Opciones <i class="fa fa-arrow-right"></i></a></td>
-				<td><a href="./?view=$grado&id=<?php echo $grado->id;?>"><?php echo $grado->nombre." ".$grado->nivel; ?></a></td>
-				<td style="width:130px;"><a href="./?view=editargrado&id=<?php echo $grado->id_grado;?>" class="btn btn-warning btn-xs">Editar</a> <a href="index.php?borrargrado&id=<?php echo $grado->id_grado;?>" class="btn btn-danger btn-xs">Eliminar</a></td>
+					<td style="width:130px;">
+						<a href="index.php?action=selectteam&id=<?php echo $curso->codgrado;?>" class="btn btn-success btn-xs">Opciones <i class="fa fa-arrow-right"></i></a>
+					</td>
+					<td><a href="./?view=$grado&id=<?php echo $curso->id;?>">
+							<?php echo $curso->nomgra." ".$curso->nombre; ?>
+							</a>
+					</td>
+					<td style="width:130px;">
+					
+
+						<?php if ($user->kind == 1 || $user->kind == 2): ?>
+							<a href="./?view=editargrado&id=<?php echo $grado->id_grado;?>" class="btn btn-warning btn-xs">Editar</a> 
+							<a href="index.php?borrargrado&id=<?php echo $grado->id_grado;?>" class="btn btn-danger btn-xs">Eliminar</a>
+						<?php else: ?>						
+
+
+						<?php endif ?>		
+					
+					</td>
+				
 				</tr>
 				<?php
 

@@ -83,22 +83,24 @@
     </section>
 
 <?php elseif(isset($_GET["opt"])&& $_GET["opt"]=="edit"):
-$grado=GradosData::getById($_GET["id"]);
+  $grado=GradosData::getById($_GET["id"]);
 ?>
-   <section class="container">
-<div class="row">
-  <div class="col-md-12">
-  <h1>Editar Grados</h1>
-  <br>
+  <section class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Editar Grados</h1>
+        <br>
         <form method="POST" action="./?action=grados&opt=upd">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Nombre:</label>
-    <input type="text" name="nombre" required value="<?=$grado->nombre;?>"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nombre:</label>
+            <input type="text" name="nombre" required value="<?=$grado->nombre;?>"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
-  </div>
-  <input type="hidden" name="id" value="<?=$grado->id_grado;?>">
-  <button type="submit" class="btn btn-success">Actualizar</button>
-  <button type="button" onclick = "location='./?view=grados&opt=all'" class="btn btn-warning">Cancelar</button>
-</form>
-    </section>
-  <?php endif;?>
+          </div>
+          <input type="hidden" name="id" value="<?=$grado->id_grado;?>">
+          <button type="submit" class="btn btn-success">Actualizar</button>
+          <button type="button" onclick = "location='./?view=grados&opt=all'" class="btn btn-warning">Cancelar</button>
+        </form>
+      </div>
+    </div>  
+  </section>
+<?php endif;?>

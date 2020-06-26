@@ -47,7 +47,7 @@ $estudiantes = EstudiantesData::getAll();
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="./?view=estudiantes&opt=all" class="small-box-footer">Ver mas <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="./?view=estudiantes&opt=all" class="small-box-footer">Ver más <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

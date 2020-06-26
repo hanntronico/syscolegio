@@ -93,6 +93,13 @@ class ProfesoresData {
 		return Model::many($query[0],new ProfesoresData());
 	}
 
+	public static function getAllsinUser(){
+		$sqlsetutf = "set names utf8";
+		$query2 = Executor::doit($sqlsetutf);				
+		$sql = "select * from ".self::$tablename." where id_prof not in (select id_prof from usuarios)";
+		$query = Executor::doit($sql);
+		return Model::many($query[0],new ProfesoresData());
+	}
 
 }
 

@@ -85,7 +85,8 @@
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->
            <li class="btn-group">
-  <a class="btn btn-primary" href="#"><i class="fa fa-user fa-fw"></i> <?php echo Core::$user->name;?></a>
+  <a class="btn btn-primary" href="#"><i class="fa fa-user fa-fw"></i> 
+    <?php echo Core::$user->name;?></a>
   <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
     <span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
   </a>
@@ -110,14 +111,31 @@
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-<?php
-$user=null;
-$user= UserData::getById($_SESSION["user_id"]);
-?>
 
+      <div style="color:#fff;">
+        <?php
+          $user=null;
+          $user= UserData::getById($_SESSION["user_id"]);
+          
+          // echo "cod por sesion: ".$codusuario = $_SESSION["idusuario"]."<br>";
+          // echo "cod class user: ".$user->id."<br>";
+        ?>
+      </div>
+      
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-         <li><a href="./?view=prof_grad"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
+
+        <?php 
+
+          if ($user->kind==1||$user->kind==2) {
+            $inicio="./?view=home";
+          }else{
+            $inicio="./?view=prof_grad";
+          }
+        ?>
+
+         <li><a href="<?php echo $inicio; ?>"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
+
 <?php if(!$user->kind):?>
          <li><a href="./?view=prof_grad"><i class="fa fa-users"></i> <span>Asistencia</span></a></li>
          <li><a href="./?view=prof_grad"><i class="fa fa-book"></i> <span>Calificaciones</span></a></li>
@@ -134,7 +152,7 @@ $user= UserData::getById($_SESSION["user_id"]);
          <li><a href="./?view=profesores&opt=all"><i class="fa fa-pencil"></i> Profesores</a></li>
          <li><a href="index.php?view=prof_tutor&opt=all"><i class="fa fa-user"></i>Profesores / Tutores</a></li>
 
-<?php if ($user->kind == 1): ?>
+      <?php if ($user->kind == 1): ?>
   
         <li class="treeview">
           <a href="#">
@@ -147,7 +165,7 @@ $user= UserData::getById($_SESSION["user_id"]);
           <ul class="treeview-menu">
             <li><a href="./?view=cursos&opt=all"><i class="fa fa-pencil-square-o"></i>Cursos</a></li>
             <li><a href="./?view=a_academico&opt=all"><i class="fa fa-calendar"></i>A&ntildeo academico</a></li>
-    <li><a href="./?view=niveles&opt=all"><i class="fa fa-bars"></i> Niveles</a></li>
+            <li><a href="./?view=niveles&opt=all"><i class="fa fa-bars"></i> Niveles</a></li>
             <li><a href="./?view=grados&opt=all"><i class="fa fa-list-ol"></i> Grados</a></li>
             <li><a href="./?view=nomina&opt=all"><i class="fa fa-folder-o"></i> Nomina</a></li>
             <li><a href="./?view=accesos&opt=all"><i class="fa fa-folder-o"></i> Accesos estudiante </a></li>
@@ -167,7 +185,7 @@ $user= UserData::getById($_SESSION["user_id"]);
           </ul>
         </li>
 
-<?php endif ?>
+      <?php endif ?>
 
         <li><a href="./?view=blanck">
           <i class="fa fa-folder-o"></i> Manual </a>
@@ -187,13 +205,13 @@ $user= UserData::getById($_SESSION["user_id"]);
     <!-- Content Header (Page header) -->
     <!-- Main content -->
     <section class="content">
-               <?php
-    date_default_timezone_set('America/Lima');
-$dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
-$meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
- //Salida: Viernes 24 de Febrero del 2012
-    $fecha=date('g:ia');
-?>
+      <?php
+         date_default_timezone_set('America/Lima');
+        $dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
+        $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+        //Salida: Viernes 24 de Febrero del 2012
+        $fecha=date('g:ia');
+      ?>
       <ol class="breadcrumb">
         <li><i class="fa fa-calendar"></i> <?php echo $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " ".date('Y')?></li>
         <li><i class="fa fa-clock-o"></i><?php echo " Hora: ".$fecha;?></li>
@@ -239,7 +257,7 @@ $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Iniciar sesion</p>
+    <p class="login-box-msg">Iniciar sesión</p>
 
     <form action="./?action=access&opt=login" method="post">
       <div class="form-group has-feedback">

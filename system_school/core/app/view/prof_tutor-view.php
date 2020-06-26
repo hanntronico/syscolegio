@@ -9,7 +9,7 @@ if(isset($_GET["opt"]) && $_GET["opt"]=="all"):?>
 <section class="container">
 <div class="row">
   <div class="col-md-12">
-    <h2>Lista de Profesores /Tutores</h2>
+    <h2>Lista de Usuarios de docentes</h2>
 <br><br>
     <?php
     $users = UserData::getAll();
@@ -62,7 +62,7 @@ if(isset($_GET["opt"]) && $_GET["opt"]=="all"):?>
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        Para agregar un profesor como tutor haga click en el boton <span class="btn btn-success btn-xs">Agregar Tutor<i class="fa fa-arrow-right"></i></span> en la lista de profesores
+        Para asignar un usuario a algún docente haga click en el boton <span class="btn btn-success btn-xs">Crear Usuario<i class="fa fa-arrow-right"></i></span> en la lista de docentes a continuación
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Entendido</button>
@@ -71,16 +71,16 @@ if(isset($_GET["opt"]) && $_GET["opt"]=="all"):?>
   </div>
 </div>
 </div>
-    <h2>Agregar Profesores como tutor</h2>
+    <h2>Asignar usuarios a los docentes</h2>
 <br>
     <?php
 
-    $profesores = ProfesoresData::getAll();
+    $profesores = ProfesoresData::getAllsinUser();
     if(count($profesores)>0){
       // si hay usuarios
       ?>
 
-      <table class="table table-bordered table-hover">
+      <table class="table table-bordered table-hover" id="table">
       <thead>
       <th></th>
       <th>Nombres y Apellidos</th>
@@ -92,7 +92,7 @@ if(isset($_GET["opt"]) && $_GET["opt"]=="all"):?>
 
         ?>
         <tr>
-        <td style="width:130px;"><a href="./?action=selectprof&id=<?php echo $prof->id_prof;?>" class="btn btn-success btn-xs">Agregar Tutor <i class="fa fa-arrow-right"></i></a></td>
+        <td style="width:130px;"><a href="./?action=selectprof&id=<?php echo $prof->id_prof;?>" class="btn btn-success btn-xs">Crear Usuario <i class="fa fa-arrow-right"></i></a></td>
         <td><?php echo $prof->nombres." ".$prof->apellidos; ?></td>
         <td><?php echo $prof->especialidad; ?></td>
         <td style="width:130px;"><?php echo $prof->num_cel; ?></td>
@@ -105,7 +105,7 @@ if(isset($_GET["opt"]) && $_GET["opt"]=="all"):?>
 
 <?php
     }else{
-      echo "<p class='alert alert-danger'>No hay Grupos</p>";
+      echo "<p class='alert alert-danger'>No hay docentes sin usuario asignado</p>";
     }
 
 
