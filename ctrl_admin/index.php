@@ -15,7 +15,8 @@ $ale = $_GET["var"];
   <link rel="stylesheet" href="vendors/css/vendor.bundle.addons.css">
   <link rel="stylesheet" href="css/style.css?f=87">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+  <!-- <link rel="shortcut icon" href="images/favicon.png" /> -->
+  <link rel="shortcut icon" href="images/scj.ico" />
 </head>
 
 <body>
