@@ -88,7 +88,7 @@ $cuerpo2 = '
 </head> 
 <body> 
 <p>
-  Gracias por comunicarse con la Institución Educativa Privada "Sagrado Corazón de Jesús", en breve, una persona encargada se comunicará con Ud. Estamos para servirlo para mejorar su experiencia con nosotros. Atte.  
+  Gracias por comunicarse con la Institución Educativa Privada "Sagrado Corazón de Jesús", en breve, una persona encargada se comunicará con Ud. Estamos para servirlo y poder mejorar su experiencia con nosotros. Atte.  
 </p>
 <p>La Dirección</p>
 
