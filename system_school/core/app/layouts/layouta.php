@@ -142,6 +142,8 @@
          <li><a href="./?view=prof_grad"><i class="fa  fa-graduation-cap"></i> <span>Conducta</span></a></li>
          <li><a href="./?view=prof_grad"><i class="fa  fa-hourglass-end"></i> <span>Mis Grados</span></a></li>
           <li><a href="./?view=cursos&idgra=<?php echo $codusuario; ?>"><i class="fa  fa-hourglass-end"></i> <span>Mis Áreas</span></a></li>
+          <li><a href="https://discord.gg/akpdUq" target="_blank"><i class="fa fa-video-camera
+"></i> <span>Sala de Profesores</span></a></li>
 <?php endif;?>
 
 

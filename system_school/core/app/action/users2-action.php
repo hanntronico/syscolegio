@@ -94,7 +94,7 @@ if ($_FILES['foto']['name']!="") {
 
 	if($_POST["password"]!=""){
 		$user->password = sha1(md5($_POST["password"]));
-		$user->update_passwd();
+		echo $user->update_passwd2();
 		Core::alert("Se ha actualizado el password!");
 	}
 	Core::alert("Usuario actualizado!");
