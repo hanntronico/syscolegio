@@ -37,7 +37,7 @@ if(isset($_POST['envia'])){
 	$recibe4 = $_POST["mensaje"];
 	
 $destinatario = "info@jesusinos.edu.pe"; 
-$asunto = "Mensaje envia desde la Plataforma Educativa ".$recibe3.""; 
+$asunto = "Mensaje enviado desde la Plataforma Educativa - Asunto : ".$recibe3.""; 
 $cuerpo = ' 
 <html> 
 <head> 
@@ -77,6 +77,28 @@ $headers .= "Return-path: info@jesusinos.edu.pe\r\n";
 //$headers .= "Bcc: capacitacion@augeperu.org\r\n";
 
 mail($destinatario,$asunto,$cuerpo,$headers);
+
+
+$destinatario2 = $recibe2; 
+$asunto2 = "Respuesta automática de Sitio web www.jesusinos.edu.pe - Asunto :"; 
+$cuerpo2 = ' 
+<html> 
+<head> 
+   <title>'.'Comunicación desde la Web'.'</title> 
+</head> 
+<body> 
+<p>
+  Gracias por comunicarse con la Institución Educativa Privada "Sagrado Corazón de Jesús", en breve, una persona encargada se comunicará con Ud. Estamos para servirlo para mejorar su experiencia con nosotros. Atte.  
+</p>
+<p>La Dirección</p>
+
+</body> 
+</html> 
+'; 
+
+mail($destinatario2,$asunto2,$cuerpo2,$headers);
+
+
 	$alerta ="yes";
 }else{
     $alerta = "";
