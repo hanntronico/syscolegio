@@ -13,7 +13,8 @@ if(count($_POST)>0){
 	$user->apoderado = $_POST["apoderado"];
 	$user->estado = $_POST["estado"];
 
-	$user->user_id = $_SESSION["user_id"];
+	// $user->user_id = $_SESSION["user_id"];
+	$user->user_id = 0;
 
 
 	$u = $user->add();
